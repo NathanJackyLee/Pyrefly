@@ -1,0 +1,28 @@
+[
+    [
+
+    ],[
+        {
+            "action": ["bg","bgm"],
+            "data": ["bg_home.jpg","bgm_owl.mp3"]
+        },{
+            "action": ["diname","ditext"],
+            "data": [["???","???"],["...","..."]]
+        },{
+            "action": ["lsprite","diname","ditext"],
+            "data": ["pythonChill.png",["Python","Python"],["*looks at your CPU","*ngelihat CPU lu"]]
+        },{
+            "action": ["ditext"],
+            "data": [["Is noone gonna eat that?","itu gaada yang makan?"]]
+        },{
+            "action": ["battle"],
+            "data": [1]
+        },{
+            "action": ["rsprite","diname","ditext"],
+            "data": ["mcSurprised.png",["MC","MC"],["dude wtf","lu gila ya"]]
+        },{
+            "action": ["end"],
+            "data": ["end"]
+        }
+    ]
+]

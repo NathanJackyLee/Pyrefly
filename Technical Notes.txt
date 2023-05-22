@@ -1,0 +1,26 @@
+====================================================================================
+Ini setup log app ny dari awal di command line VSCode, klo mau coba di komputer sendiri
+...Pyrefly> npx create-react-app pyrefly
+...Pyrefly> cd pyrefly
+...Pyrefly\pyrefly> npm install @monaco-editor/react
+...Pyrefly\pyrefly> npm install axios
+...Pyrefly\pyrefly> npm install -D tailwindcss
+...Pyrefly\pyrefly> npx tailwindcss init
+di ...src\index.css paste:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+di paling atas ny
+Tanpa setup ini pun, cuma file nya doang harusny bisa jalan dengan npm start
+Masih bisa tulis css biasa klo mau, tapi di html nya pake className=, bukan class=
+Tapi untuk div yg harus bisa ganti background, pake tailwind
+css biasa dan tailwind beda syntax/istilah, lihat internet utk pake tailwind
+====================================================================================
+
+untuk start live server
+...Pyrefly\pyrefly> npm run start
+atau
+...Pyrefly\pyrefly> npm start
+waktu live server aktif, setiap kali kita save file bakal auto-compile dan langsung update di localhost kita
+untuk end live server tinggal keyboard interrupt (Ctrl + C)
+bakal muncul message "Terminate batch job (Y/N)? " tinggal ketik Y trus enter
