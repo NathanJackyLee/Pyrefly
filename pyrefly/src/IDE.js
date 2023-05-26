@@ -106,6 +106,21 @@ function IDE(props){
             }else{
                 for(let i=0;i<response.data.submissions.length;i++) console.log(response.data.submissions[i].status?.description);
                 // console.log("got a code verdict!" + statusId);
+                let verdict = "You did it!"
+                let obstacle = -1;
+                for(let i=0;i<response.data.submissions.length;i++) if(response.data.submissions[i].status?.id != 3){
+                    verdict = response.data.submissions[i].status?.description;
+                    obstacle = i;
+                    break;
+                }
+                if(obstacle == -1) setOutput(verdict);
+                else{
+                    verdict += '\n';
+                    verdict += "Failed Case: " + testcase[obstacle] + '\n';
+                    verdict += "Your answer: " + response.data.submissions[obstacle].stdout + '\n';
+                    verdict += "Answer was supposed to be: " + expectout[obstacle];
+                    setOutput(verdict);
+                }
                 return
             }
         }catch (err){
@@ -190,9 +205,9 @@ function IDE(props){
             <button onClick={toggleTesting}>testing mode: off</button> <br/>
             <p>{question}</p>
             <br/>
-            <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
-            <br/>
-            <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p>
+            {/* <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p> */}
+            {/* <br/> */}
+            {/* <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p> */}
             <Editor
                 height="85vh"
                 width={`100%`}
@@ -203,11 +218,11 @@ function IDE(props){
                 onChange={handleEditorChange}
             />
             <br/>
-            {/* <div className="OutputBox">
+            <div className="OutputBox">
                 <h5>Output boxe</h5>
                 <p>{output}</p>
             </div>
-            <div className="UserInputBox">
+            {/* <div className="UserInputBox">
                 <h3>Custom input boxe</h3>
                 <textarea onChange={() => setInput(input)}>{input}</textarea>
             </div> */}

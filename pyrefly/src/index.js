@@ -6,33 +6,29 @@ import Test from './test';
 // import reportWebVitals from './reportWebVitals';
 
 const bgm = new Audio()
+const sfx = new Audio()
 const setbgm = (name) =>{
-  console.log("setbgm triggered");
-  // bgm.load();
   let bgm_path = require('./assets/' + name);
-  // console.log(bgm_path);
-  // console.log(bgm.src);
-  // if(bgm_path === bgm.src) return;
   bgm.src = bgm_path;
-  // bgm.load();
   bgm.loop = true;
   bgm.play();
-  // bgm.volume = 1.0;
 }
-const setvol = (vol) =>{
-  console.log("setting volume " + vol);
-  bgm.volume = vol;
+const setbgmvol = (vol) =>{bgm.volume = vol;}
+function getbgmvol(){return bgm.volume;}
+const playsfx = (name) =>{
+  console.log("index playsfx")
+  let sfx_path = require('./assets/' + name);
+  sfx.src = sfx_path;
+  sfx.play();
 }
-function getvol(){
-  console.log("getvol " + bgm.volume);
-  return bgm.volume;
-}
+const setsfxvol = (vol) =>{sfx.volume = vol;}
+function getsfxvol(){return sfx.volume;}
 
 console.log("index rendered");
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <App setbgm={setbgm} setvol={setvol} vol={getvol}/>
+    <App setbgm={setbgm} setbgmvol={setbgmvol} bgmvol={getbgmvol} playsfx={playsfx} setsfxvol={setsfxvol} sfxvol={getsfxvol}/>
   // </React.StrictMode>
 );
 // OK I know React comes with StrictMode by default,

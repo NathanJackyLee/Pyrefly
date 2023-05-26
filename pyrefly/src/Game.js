@@ -10,26 +10,11 @@ function Game(props){
     const [idx, setIdx] = React.useState(0);
 
     const advance = () =>{
-        // console.log("idx is now " + idx);
         if(story[chapter][idx]["action"][0] === "end") setIdx(0);
         else setIdx(old => old + 1);
     }
-    // const [inBattle, setInBattle] = React.useState(false);
-    // function enterBattle(){
-    //     if(inBattle == false) setInBattle(true);
-    //     console.log("enterBattle");
-    //     console.log(inBattle);
-    // }
-    // function exitBattle(){
-    //     if(inBattle == true) setInBattle(false);
-    //     console.log("exitBattle");
-    //     console.log(inBattle);
-    // }
 
-    // const leg = story[chapter].length;
-    // console.log("story[chapter] leg: " + story[chapter].length);
     const bg = useRef("");
-    // const bgm = useRef("");
     const diname = useRef("");
     const ditext = useRef("");
     const lsprite = useRef("");
@@ -46,7 +31,6 @@ function Game(props){
     const endChapter = () =>{
         console.log("end chapter");
         bg.current = "";
-        // bgm.current = "";
         lsprite.current = "";
         rsprite.current = "";
         diname.current = "";
@@ -60,15 +44,13 @@ function Game(props){
     else{
         let leg = story[chapter][idx]["action"].length;
         let i = 0; for(i=0;i<leg;i++){
-            if(story[chapter][idx]["action"][i] === "go"){
-                advance();
-            }else if(story[chapter][idx]["action"][i] === "bg"){
+            if(story[chapter][idx]["action"][i] === "bg"){
                 bg.current = "bg-[url('./assets/" + story[chapter][idx]["data"][i] + "')]";
             }else if(story[chapter][idx]["action"][i] === "bgm"){
-                console.log("story bgm " + story[chapter][idx]["data"][i]);
                 props.setbgm(story[chapter][idx]["data"][i]);
-            }
-            else if(story[chapter][idx]["action"][i] === "lsprite") lsprite.current = story[chapter][idx]["data"][i];
+            }else if(story[chapter][idx]["action"][i] == "sfx"){
+                props.playsfx(story[chapter][idx]["data"][i]);
+            }else if(story[chapter][idx]["action"][i] === "lsprite") lsprite.current = story[chapter][idx]["data"][i];
             else if(story[chapter][idx]["action"][i] === "rsprite") rsprite.current = story[chapter][idx]["data"][i];
             else if(story[chapter][idx]["action"][i] === "diname") diname.current = story[chapter][idx]["data"][i][props.lang];
             else if(story[chapter][idx]["action"][i] === "ditext") ditext.current = story[chapter][idx]["data"][i][props.lang];
