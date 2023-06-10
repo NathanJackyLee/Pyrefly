@@ -108,12 +108,12 @@ function IDE(props){
                 // console.log("got a code verdict!" + statusId);
                 let verdict = "You did it!"
                 let obstacle = -1;
-                for(let i=0;i<response.data.submissions.length;i++) if(response.data.submissions[i].status?.id != 3){
+                for(let i=0;i<response.data.submissions.length;i++) if(response.data.submissions[i].status?.id !== 3){
                     verdict = response.data.submissions[i].status?.description;
                     obstacle = i;
                     break;
                 }
-                if(obstacle == -1) setOutput(verdict);
+                if(obstacle === -1) setOutput(verdict);
                 else{
                     verdict += '\n';
                     verdict += "Failed Case: " + testcase[obstacle] + '\n';
