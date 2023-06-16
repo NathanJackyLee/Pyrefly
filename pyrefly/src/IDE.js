@@ -10,10 +10,13 @@ function IDE(props){
     const [testing, setTesting] = React.useState(true);
     const [value, setValue] = React.useState("");
     const [input, setInput] = React.useState("");
-    const [output, setOutput] = React.useState("");
+    const [output, setOutput] = React.useState(<div className="OutputBox"></div>);
 
     const handleEditorChange = (value) => {setValue(value);}
-    const toggleTesting = () => setTesting((prev) => !prev);
+    const toggleTesting = () => {
+        
+        setTesting((prev) => !prev);
+    }
     
     const checkTestRun = async (token) =>{
         const options = {
@@ -38,7 +41,7 @@ function IDE(props){
                 }, 2000)
                 return
             }else{
-                setOutput(response.data.stdout);
+                setOutput(<div className="OutputBox"><p>{response.data.stdout}</p></div>);
                 console.log("got a code verdict!" + statusId);
                 return
             }
@@ -113,14 +116,22 @@ function IDE(props){
                     obstacle = i;
                     break;
                 }
-                if(obstacle === -1) setOutput(verdict);
-                else{
-                    verdict += '\n';
-                    verdict += "Failed Case: " + testcase[obstacle] + '\n';
-                    verdict += "Your answer: " + response.data.submissions[obstacle].stdout + '\n';
-                    verdict += "Answer was supposed to be: " + expectout[obstacle];
-                    setOutput(verdict);
-                }
+                if(obstacle === -1) setOutput(<div className="OutputBox"><p>{verdict}</p></div>);
+                // else{
+                //     verdict += '\n';
+                //     verdict += "Failed Case: " + testcase[obstacle] + '\n';
+                //     verdict += "Your answer: " + response.data.submissions[obstacle].stdout + '\n';
+                //     verdict += "Answer was supposed to be: " + expectout[obstacle];
+                //     setOutput(verdict);
+                // }
+                else setOutput(
+                    <div>
+                        <p>{verdict}</p>
+                        <p>Failed Case: {testcase[obstacle]}</p>
+                        <p>Your Answer: {response.data.submissions[obstacle].stdout}</p>
+                        <p>Answer was supposed to be: {expectout[obstacle]}</p>
+                    </div>
+                )
                 return
             }
         }catch (err){
@@ -222,10 +233,6 @@ function IDE(props){
                 <h5>Output boxe</h5>
                 <p>{output}</p>
             </div>
-            {/* <div className="UserInputBox">
-                <h3>Custom input boxe</h3>
-                <textarea onChange={() => setInput(input)}>{input}</textarea>
-            </div> */}
             <button onClick={handleJudge}>Judge!</button>
             <button onClick={props.endBattle}>end battle</button>
         </div>
