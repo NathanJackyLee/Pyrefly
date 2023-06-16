@@ -10,7 +10,12 @@ function StageSelect(props){
 // {/* <center> */}
 <div className='StageMainContainer'>
         <div className='justify'>
-            <div className= {screening}>
+            
+            <div className="Darker">
+                <div className= {screening}></div>
+            </div>
+            
+
                 <div style={{
                     position: 'fixed',
                     top: 0,
@@ -57,7 +62,7 @@ function StageSelect(props){
                         
                     
                 
-            </div>
+            
         </div>
 </div>
 

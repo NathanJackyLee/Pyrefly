@@ -1,11 +1,15 @@
 .bg.current {
-    background-color: black;
+    /* background-color: black; */
     padding: 20px;
     
+}
+html{
+    z-index: -1;
 }
 
  html,body,div{
     overflow: hidden;
+
 } 
  html,body{
     background-color:slategray;
@@ -21,6 +25,8 @@
     height: 765px;
     border: #2B0B3A;
     background-color: gainsboro; 
+    border-color: #2B0B3A;
+    border-width: 10px;
 }
 
 .LeftSprite {
@@ -71,6 +77,13 @@ img {
     top: 40px;
     background: #FFFFFF;
     border-radius: 25px;
+    
+}
+
+.Textss{
+    position: absolute;
+    top: 10px;
+    left: 30px;
 }
 
 .Advance {
@@ -96,3 +109,7 @@ img {
 }
 
 
+.bg.current {
+    z-index: 0;
+    position: absolute;
+}

@@ -6,6 +6,12 @@ html,body{
     background-color: slategray;
 }
 
+.Darker{
+    filter: brightness(0.3);
+    /* position: absolute; */
+    z-index: -1;
+}
+
 .StageMainContainer {
     overflow-x: hidden;
     position: fixed;
@@ -14,8 +20,8 @@ html,body{
     transform: translate(-50%, -50%);
     width: 1270px;
     height: 765px;
-    border: #2B0B3A;
-    
+    border-color: #2B0B3A;
+    border-width: 10px;
 }
 
  
@@ -92,7 +98,8 @@ html,body{
     left: 20px;
     top: 10px;
 
-    background: url(assets/TestImage_1.jpg), #D9D9D9;
+    background: url(assets/Artificial_Park.jpg), #D9D9D9;
+    background-size: cover;
 }
 
 .Chapter2img {
@@ -102,7 +109,8 @@ html,body{
     left: 20px;
     top: 10px;
 
-    background: url(assets/ChapterII.jpg), #D9D9D9;
+    background: url(assets/Waiting_Room.jpg), #D9D9D9;
+    background-size: cover;
 }
 
 
@@ -113,7 +121,8 @@ html,body{
     left: 20px;
     top: 10px;
 
-    background: url(assets/TestImage_1.jpg), #D9D9D9;
+    background: url(assets/Secret_Base.jpg), #D9D9D9;
+    background-size: cover;
 }
 
 .ChapterContainer {
@@ -123,6 +132,7 @@ html,body{
     top: 0px;
     margin-top: -50px;
     background: rgba(255, 255, 255, 0.5);
+    position: absolute;
 }
 
 .BackButton{

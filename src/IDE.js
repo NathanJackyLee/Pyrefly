@@ -3,10 +3,17 @@ import Editor from '@monaco-editor/react';
 import battledata from "./data/battledata.json";
 import axios from "axios";
 import "./IDE.css";
-import imagetest from "./assets/TestCharacteressTransparentBack.png"
+import imagetest from "./assets/MeowtonFix.png"
 import chatbox from "./assets/ChatBoxIDETransParentBackground.png"
+import imagefeedback from "./assets/TextBoxIDE.png"
+import laptop from "./assets/LaptopIDE.png"
+
+
 
 function IDE(props){
+    let bg = "bg-[url('./assets/IDETestimage.jpg')]"
+    let IDEBackground = bg + " bg-no-repeat w-full h-screen";
+
     const question = battledata[props.battle]["question"][props.lang];
     const testcase = battledata[props.battle]["testcase"];
     const expectout = battledata[props.battle]["expectout"];
@@ -14,6 +21,7 @@ function IDE(props){
     const [value, setValue] = React.useState("");
     const [input, setInput] = React.useState("");
     const [output, setOutput] = React.useState("");
+
 
     const handleEditorChange = (value) => {setValue(value);}
     const toggleTesting = () => setTesting((prev) => !prev);
@@ -116,14 +124,17 @@ function IDE(props){
                     obstacle = i;
                     break;
                 }
-                if(obstacle === -1) setOutput(verdict);
-                else{
-                    verdict += '\n';
-                    verdict += "Failed Case: " + testcase[obstacle] + "\n";
-                    verdict += "Your answer: " + response.data.submissions[obstacle].stdout + '\n';
-                    verdict += "Answer was supposed to be: " + expectout[obstacle];
-                    setOutput(verdict);
+                if(obstacle === -1){
+                    window.current = true;
+                    setOutput(<div className="OutputBox"><p>{verdict}</p></div>);
                 }
+                // else{
+                //     verdict += '\n';
+                //     verdict += "Failed Case: " + testcase[obstacle] + "\n";
+                //     verdict += "Your answer: " + response.data.submissions[obstacle].stdout + '\n';
+                //     verdict += "Answer was supposed to be: " + expectout[obstacle];
+                //     setOutput(verdict);
+                // }
                 return
             }
         }catch (err){
@@ -170,10 +181,25 @@ function IDE(props){
     }
 
     if(testing) return(
+        
+        
         <div className="IDE">
             {/* <h1>This is the IDE with battle number {props.battle}</h1> <br/> */}
-            <button onClick={toggleTesting}>testing mode: on</button> <br/>
-            <p>{question}</p>
+            
+            {/* <div className="Darker">
+                <div className={IDEBackground}></div>
+            </div> */}
+            
+            
+
+            <button className="ChangeMode" onClick={toggleTesting}>testing mode: on</button> <br/>
+            {/* <div className="IDELaptop">
+                <img src={laptop}></img>
+            </div> */}
+            <div className="questionbox">
+                <p style={{ color: "white"}}>{question}</p>
+            </div>
+
             <div className="EditorBox">
                 <Editor
                 height="85vh"
@@ -188,16 +214,20 @@ function IDE(props){
             </div>
 
             <div className="OutputBox">
-                <h5>Output box</h5>
+                <h5>Feedback</h5>
                 <p>{output}</p>
             </div>
 
-            {/* <div className="OutputBoxImage">
-                <img className='ChetBox' src={chatbox}></img>
-            </div> */}
+
+            <div className="Feedback">
+            <img src={imagefeedback}></img>
+            </div>
+
+
+            
 
             <div className="UserInputBox">
-                <h3>Custom input box:</h3>
+                <h3 style={{ color: "white"}}>Custom input box:</h3>
                 <textarea
                     className = "input-box"
                     rows = "5"
@@ -214,12 +244,17 @@ function IDE(props){
             <button className='CompileButton' onClick={handleTestRun}>Test Run!</button>
             {/* <button onClick={props.endBattle}>end battle</button> */}
         </div>
+        
     );
     else return(
         <div className="IDE">
             {/* <h1>This is the IDE with battle number {props.battle}</h1> <br/> */}
-            <button onClick={toggleTesting}>testing mode: off</button> <br/>
-            <p>{question}</p>
+            
+            <button className="ChangeModeYes" onClick={toggleTesting}>testing mode: off</button> <br/>
+            <div className="questionbox">
+                <p style={{ color: "white"}}>{question}</p>
+            </div>
+            
             <br/>
             <div className="Questions">
                 <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
@@ -241,12 +276,12 @@ function IDE(props){
             </div>
 
             <div className="OutputBox">
-                <h5>Output box</h5>
+                <h5>Feedback</h5>
                 <p>{output}</p>
             </div>
 
-            <div className="Outputs">
-                
+            <div className="Feedback">
+            <img src={imagefeedback}></img>
             </div>
 
             {/* <div className="UserInputBox">
@@ -258,6 +293,7 @@ function IDE(props){
             </div>
             <button className="CompileButton" onClick={handleJudge}>Judge!</button>
             {/* <button onClick={props.endBattle}>end battle</button> */}
+            {window.current ? <button className ="ContinueEp" onClick={props.endBattle}>end battle</button>: <></>}
         </div>
     )
 }

@@ -36,11 +36,12 @@ function App(props) {
       <MainMenu setRoot={setRoot} lang={language} />
   );
   else if(root === 1) return (
-      <Game setRoot={setRoot} lang={language} setbgm={props.setbgm} setvol={props.setvol}/>
+      <Game setRoot={setRoot} lang={language} setbgm={props.setbgm} setbgmvol={props.setbgmvol} playsfx={props.playsfx} setsfxvol={props.setsfxvol}/>
   );
   else if(root === 2) return (
-      <Settings setRoot={setRoot} lang={language} toggleLanguage={toggleLanguage} setbgm={props.setbgm} setvol={props.setvol} vol={props.vol}/>
+      <Settings setRoot={setRoot} lang={language} toggleLanguage={toggleLanguage} setbgm={props.setbgm} setbgmvol={props.setbgmvol} bgmvol={props.bgmvol} playsfx={props.playsfx} setsfxvol={props.setsfxvol} sfxvol={props.getsfxvol}/>
   );
 }
+
 
 export default App;

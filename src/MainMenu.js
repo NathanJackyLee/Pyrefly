@@ -28,8 +28,8 @@ function MainMenu(props){
 
                 <button className='button_' onClick={() => props.setRoot(1)}>{props.lang === 0 ? "Play!" : "Main!"}</button>
                 <button className ='button_' onClick={() => props.setRoot(2)}>{props.lang === 0 ? "Settings" : "Pengaturan"}</button>
-                <button className ='button_' onClick={() => props.setRoot(2)}>{props.lang === 0 ? "About" : "Pengaturan"}</button>
-                <button className ='button_' onClick={() => props.setRoot(2)}>{props.lang === 0 ? "Quit" : "Pengaturan"}</button>
+                {/* <button className ='button_' onClick={() => props.setRoot(2)}>{props.lang === 0 ? "About" : "Pengaturan"}</button> */}
+                {/* <button className ='button_' onClick={() => props.setRoot(2)}>{props.lang === 0 ? "Quit" : "Pengaturan"}</button> */}
    
             </div>
         </div>

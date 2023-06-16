@@ -4,13 +4,22 @@
     ],[
         {
             "action": ["bg","bgm"],
-            "data": ["bg_home.jpg","bgm_owl.mp3"]
+            "data": ["Artificial_Park.jpg","bgm_owl.mp3"]
         },{
             "action": ["diname","ditext"],
-            "data": [["???","???"],["...","..."]]
+            "data": [["MC","MC"],["Hey, Meowton, ready to have some fun today?","..."]]
+        },{
+            "action": ["diname","ditext"],
+            "data": [["Meowton","Meowton"],["[Meowton beeps and responds with a cheerful sound]","..."]]
+        },{
+            "action": ["diname","ditext"],
+            "data": [["MC","MC"],["That's the spirit!","..."]]
+        },{
+            "action": ["diname","ditext"],
+            "data": [["MC","MC"],["Meowton, you're the best companion I could ask for. We always have such a great time together.","..."]]
         },{
             "action": ["lsprite","diname","ditext"],
-            "data": ["pythonChill.png",["Python","Python"],["*looks at your CPU","*ngelihat CPU lu"]]
+            "data": ["TestCharacteressTransparentBack.png",["Python","Python"],["*looks at your CPU","*ngelihat CPU lu"]]
         },{
             "action": ["ditext"],
             "data": [["Is noone gonna eat that?","itu gaada yang makan?"]]

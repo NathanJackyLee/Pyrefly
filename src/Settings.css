@@ -10,7 +10,8 @@ html, body, div {
     transform: translate(-50%, -50%);
     width: 1270px;
     height: 765px;
-    border: #2B0B3A;
+    border-color: #2B0B3A;
+    border-width: 10px;
 }
 
 .SettingsText {
@@ -29,38 +30,108 @@ html, body, div {
     opacity: 0.5;
 }
 
-.buttonplacing {
-    position: absolute;
-    top: 25%;
-}
-
 .LanguageButton {
     font-family: 'Podkova';
-    color: #fff;
-    font-size: 36px;
-}
-
-.BacktoMainMenuContainer {
-    font-family: 'Podkova';
-    color: #fff;
-    font-size: 36px;
-}
-
-.MusicSelectionContainer{   
     color: white;
-}
-
-.MusicSelectionContainer2{   
-    color: white;
-}
-
-.FastVolumeSettings{
-    color: white;
-
-}
-
-.AudioSliders {
+    font-size: 48px;
     position: absolute;
-    top: 80%;
+    top: 35%;
+    left: 10%;
+    font-weight: bold;
 }
 
+.BackMenu {
+    position: absolute;
+    font-family: 'Podkova';
+    color: white;
+    font-size: 48px;
+    bottom: 20%;
+    left: 10%;
+    font-weight: bold;
+}
+
+/* //AudioButtons */
+
+.BGMOWL{
+    position: absolute;
+    font-family: 'Podkova';
+    color: white;
+    font-size: 36px;
+    top: 65%;
+    right: 10%;
+    font-weight: bold;
+}
+
+.BGM1{
+    position: absolute;
+    font-family: 'Podkova';
+    color: white;
+    font-size: 36px;
+    top: 65%;
+    right: 30%;
+    font-weight: bold;
+}
+
+.PlaySFX{
+    position: absolute;
+    font-family: 'Podkova';
+    color: white;
+    font-size: 36px;
+    top: 35%;
+    right: 20%;
+    font-weight: bold;
+}
+
+/* //SFX */
+
+.sfx-volume-slider{
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    width: 30%;
+}
+/* Adjust the size of the slider thumb */
+.sfx-volume-slider::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+}
+  
+.sfx-volume-slider::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+  }
+  
+.sfx-volume-slider::-ms-thumb {
+    height: 16px;
+    width: 16px;
+}
+
+/* //BGM */
+
+.bgm-volume-slider{
+    position: absolute;
+    bottom: 23%;
+    right: 10%;
+    width: 30%;
+}
+/* Adjust the size of the slider thumb */
+.bgm-volume-slider::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+}
+  
+.bgm-volume-slider::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+  }
+  
+.bgm-volume-slider::-ms-thumb {
+    height: 16px;
+    width: 16px;
+}
+
+/* DarkerBackground */
+
+.Darker{
+    filter: brightness(0.3);
+}
