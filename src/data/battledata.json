@@ -1,0 +1,20 @@
+[
+    {
+        "battlenum": 0,
+        "question": "there is no battle 0",
+        "testcase": "bruh",
+        "expectout": "bruh"
+    },
+    {
+        "battlenum": 1,
+        "question": ["question 1 english","pertanyaan 1 indo"],
+        "testcase": ["hello world","test","b"],
+        "expectout": ["hello world","test","b"]
+    },
+    {
+        "battlenum": 2,
+        "question": ["question 2 english","pertanyaan 2 indo"],
+        "testcase": ["1 1","2 2","3 3"],
+        "expectout": ["2","4","6"]
+    }
+]

@@ -1,0 +1,82 @@
+div{
+    overflow: hidden;
+}
+
+
+.IDE{
+    overflow-x: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1270px;
+    height: 765px;
+    border: #2B0B3A;
+    background-color: gainsboro; 
+}
+
+.EditorBox {
+    height: 450px;
+    width: 650px;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+}
+
+.UserInputBox{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    left: 20px;
+    bottom: 45px;
+}
+
+textarea {
+    width: 350px;
+    height: 400px;
+    
+}
+
+.CompileButton {
+    position: absolute;
+    background-color: white;
+     
+}
+
+.CompileButton {
+    width: 250px;
+    height: 100px;
+    right: 620px; 
+    bottom: 120px;
+}
+
+.TestSiteChars {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    margin: auto;
+}
+
+img{
+    height: 400px;
+}
+
+.OutputBox{
+    position: absolute;
+    top: 70px;
+    right: 65px;
+    background-color: white;
+    width: 500px;
+    height: 250px;
+
+    
+}
+
+.Questions{
+    position: absolute;
+    bottom: 120px;
+    left: 20px;
+    background-color: white;
+    width: 350px;
+    height: 100px;
+}
