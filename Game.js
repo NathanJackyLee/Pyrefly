@@ -5,8 +5,12 @@ import IDE from "./IDE";
 import testimg from "./assets/testimg.jpg";
 import story from "./data/story.json"
 import lsprite1 from "./assets/TestCharacteressTransparentBack.png";
-import bg1 from "./assets/MainMenu.jpg"
+import bg1 from "./assets/Artificial_Park.jpg"
 import './Game.css';
+import Asep from "./assets/asep.png"
+import Meowton from "./assets/MeowtonFix.png"
+
+
 
 function Game(props){
     const [chapter, setChapter] = React.useState(0);
@@ -48,18 +52,19 @@ function Game(props){
         let leg = story[chapter][idx]["action"].length;
         let i = 0; for(i=0;i<leg;i++){
             if(story[chapter][idx]["action"][i] === "bg"){
-                bg.current = "bg-[url('./assets/" + story[chapter][idx]["data"][i] + "')]";
+                bg.current = "bg-[url('./assets/" + story[chapter][idx]["data"][i] + "')] bg-no-repeat h-screen w-full bg-cover";
             }else if(story[chapter][idx]["action"][i] === "bgm"){
                 props.setbgm(story[chapter][idx]["data"][i]);
             }else if(story[chapter][idx]["action"][i] == "sfx"){
                 props.playsfx(story[chapter][idx]["data"][i]);
-            }else if(story[chapter][idx]["action"][i] === "lsprite") lsprite.current = story[chapter][idx]["data"][i];
-            else if(story[chapter][idx]["action"][i] === "rsprite") rsprite.current = story[chapter][idx]["data"][i];
-            else if(story[chapter][idx]["action"][i] === "diname") diname.current = story[chapter][idx]["data"][i][props.lang];
+            }else if(story[chapter][idx]["action"][i] === "lsprite"){
+                lsprite.current = require(`./assets/${story[chapter][idx]["data"][i]}`);
+            }else if(story[chapter][idx]["action"][i] === "rsprite"){
+                rsprite.current = require(`./assets/${story[chapter][idx]["data"][i]}`);
+            }else if(story[chapter][idx]["action"][i] === "diname") diname.current = story[chapter][idx]["data"][i][props.lang];
             else if(story[chapter][idx]["action"][i] === "ditext") ditext.current = story[chapter][idx]["data"][i][props.lang];
             else if(story[chapter][idx]["action"][i] === "battle"){
                 battle_number = story[chapter][idx]["data"][i];
-                // enterBattle();
             }
             else if(story[chapter][idx]["action"][i] === "end"){
                 endChapter();
@@ -70,52 +75,45 @@ function Game(props){
             <IDE lang={props.lang} battle={battle_number} endBattle={endBattle}/>
         );
         else return(
-        <div className="GameMainContainer">
-            
-            <div className="background">
-                <p>background: {bg.current}</p> <br/>
-                {/* {bg.current} */}
+        <div className={bg.current}>
+            <div className="LeftSprite">
+                {/* Position for LeftSprite */}
+                <img src={lsprite.current} alt="didnt work"></img>
+                {/* <p>{lsprite.current}</p> <br/> */}
             </div>
-                <div className="LeftSprite">
-                    {/* Position for LeftSprite */}
-                    {/* <img src={lsprite1}></img> */}
-                    <p>lsprite: {lsprite.current}</p> <br/>
-                </div>
                 
-                <div className="RightSprite">
-                    {/* Position For Right Sprite */}
-                    {/* <img src={lsprite1}></img> */}
-                    <p>rsprite: {rsprite.current}</p> <br/>
+            <div className="RightSprite">
+                {/* Position For Right Sprite */}
+                <img src={rsprite.current} alt={rsprite.current}></img>
+                {/* <p>{rsprite.current}</p> <br/> */}
+            </div>
+            
+            <div className="TextBoxContainer">
+                <div className="NameBox">
+                    <p className="Speaking"> {diname.current}</p> <br/>
                 </div>
-                
-                <div className="TextBoxContainer">
-                    <div className="NameBox">
-                        <p>diname: {diname.current}</p> <br/>
+                <div className="TextBoxRectangle">
+                    <div className="Textss">
+                        <p> {ditext.current}</p> <br/>
                     </div>
-                    <div className="TextBoxRectangle">
-                        <div className="Textss">
-                            <p>ditext: {ditext.current}</p> <br/>
-                        </div>
-                        
-                    </div>
-                    
                 </div>
+            </div>
 
-                <div className="AdvanceandEnd">
-                    <div className="Advance">
-                        <button onClick={() => advance()}>try advancing page</button>
-                    </div>
-                    
+            <div className="AdvanceandEnd">
+                <div className="Advance">
+                    <button onClick={() => advance()}>try advancing page</button>
+                </div>
+                
                 {/* <button onClick={() => setInBattle(true)}>try entering battle</button> */}
 
-                    <div className="End">
-                        <button onClick={() => endChapter()}>try end of chapter</button>
-                    </div>
-                    
+                <div className="End">
+                    <button onClick={() => endChapter()}>try end of chapter</button>
                 </div>
+                
+            </div>
 
             
-            </div>
+        </div>
         );
     }
 }
