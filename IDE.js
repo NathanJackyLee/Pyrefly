@@ -10,6 +10,7 @@ import laptop from "./assets/LaptopIDE.png";
 
 function IDE(props){
     const question = battledata[props.battle]["question"][props.lang];
+    const hint = battledata[props.battle]["hint"][props.lang];
     const testcase = battledata[props.battle]["testcase"];
     const expectout = battledata[props.battle]["expectout"];
     const [testing, setTesting] = React.useState(true);
@@ -23,6 +24,14 @@ function IDE(props){
     const toggleTesting = () => {
         
         setTesting((prev) => !prev);
+    }
+
+    const showHint = () =>{
+        setOutput(
+            <div className="OutputBox">
+                <p>{hint}</p>
+            </div>
+        )
     }
     
     const checkTestRun = async (token) =>{
@@ -127,13 +136,6 @@ function IDE(props){
                     win.current = true;
                     setOutput(<div className="OutputBox"><p>{verdict}</p></div>);
                 }
-                // else{
-                //     verdict += '\n';
-                //     verdict += "Failed Case: " + testcase[obstacle] + '\n';
-                //     verdict += "Your answer: " + response.data.submissions[obstacle].stdout + '\n';
-                //     verdict += "Answer was supposed to be: " + expectout[obstacle];
-                //     setOutput(verdict);
-                // }
                 else setOutput(
                     <div className="OutputBox">
                         <p>{verdict}</p>
@@ -189,12 +191,12 @@ function IDE(props){
 
     if(testing) return(
         <div className="IDE">
-            <h1>This is the IDE with battle number {props.battle}</h1> <br/>
-            {/* <button onClick={toggleTesting}>testing mode: on</button> <br/> */}
             <button className="ChangeMode" onClick={toggleTesting}>testing mode: on</button> <br/>
+
             <div className="questionbox">
                 <p style={{ color: "white"}}>{question}</p>
             </div>
+
             <div className="EditorBox">
                 <Editor
                 height="85vh"
@@ -204,14 +206,27 @@ function IDE(props){
                 theme="vs-light"
                 defaultValue="// write your code here"
                 onChange={handleEditorChange}
-                />
-                <br/>    
+            />
+            <br/>    
             </div>
-            <br/>
-            {output}
+
+            <div className="OutputBox">
+                <h5>Feedback</h5>
+                {/* {output} */}
+            </div>
+
+            <div className="OutputTexts">
+                {output}    
+            </div>
+
+
             <div className="Feedback">
             <img src={imagefeedback}></img>
             </div>
+
+
+            
+
             <div className="UserInputBox">
                 <h3 style={{ color: "white"}}>Custom input box:</h3>
                 <textarea
@@ -221,19 +236,34 @@ function IDE(props){
                     onChange = {(e) => setInput(e.target.value)}
                 >
                 </textarea>
+
+
+            </div>
+            <div className="TestSiteChars">
+                <img src={imagetest}></img>
             </div>
             <button className='CompileButton' onClick={handleTestRun}>Test Run!</button>
+            <button className='CompileButton' onClick={showHint}>show hint</button>
             {/* <button onClick={props.endBattle}>end battle</button> */}
         </div>
+        
     );
     else return(
         <div className="IDE">
-            <h1>This is the IDE with battle number {props.battle}</h1> <br/>
+            {/* <h1>This is the IDE with battle number {props.battle}</h1> <br/> */}
+            
             <button className="ChangeModeYes" onClick={toggleTesting}>testing mode: off</button> <br/>
             <div className="questionbox">
                 <p style={{ color: "white"}}>{question}</p>
             </div>
+            
             <br/>
+            <div className="Questions">
+                <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
+                <br/>
+                <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p>
+            </div>
+
             <div className="EditorBox">
                 <Editor
                 height="85vh"
