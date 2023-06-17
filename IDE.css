@@ -1,0 +1,137 @@
+div{
+    overflow: hidden;
+}
+
+
+
+.IDE{
+    overflow-x: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 1270px;
+    height: 765px; */
+    width: 100%;
+    height: 100%;
+    border: #2B0B3A;
+    background-color: gainsboro; 
+    border-color: #2B0B3A;
+    border-width: 10px;
+    
+    background: url(assets/IDETestimage.jpg);
+    background-size: cover;
+    /* filter: brightness(1.2);  */
+}
+
+/* p,h3 {
+    color: red;
+} */
+
+.IDELaptop{
+    position: absolute;
+    
+}
+
+.EditorBox {
+    height: 450px;
+    width: 640px;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+}
+
+.UserInputBox{
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    left: 20px;
+    bottom: 95px;
+
+}
+
+textarea {
+    width: 350px;
+    height: 400px;
+    
+}
+
+.CompileButton {
+    position: absolute;
+    background-color: white;
+     
+}
+
+.CompileButton {
+    width: 250px;
+    height: 100px;
+    right: 620px; 
+    bottom: 120px;
+    border-radius: 25px;
+}
+
+.TestSiteChars {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    margin: auto;
+    z-index: 0;
+}
+
+img{
+    height: 380px;
+}
+
+.OutputBox{
+    position: absolute;
+    top: 80px;
+    right: 170px;
+    background-color: white;
+    width: 310px;
+    height: 200px;
+
+    
+}
+
+.Questions{
+    position: absolute;
+    bottom: 120px;
+    left: 20px;
+    background-color: white;
+    width: 350px;
+    height: 100px;
+}
+
+.Feedback{
+    position: absolute;
+    right: 150px;
+    z-index: -1;
+    /* width: 390px; */
+}
+
+.ChangeMode{
+    color: green;
+    position: absolute;
+    left:20px;
+    top: 5px;
+
+}
+
+.ChangeModeYes{
+    color: red;
+    position: absolute;
+    left:20px;
+    top: 5px;
+}
+
+.questionbox{
+    position: absolute;
+    left: 20px;
+}
+
+.ContinueEP{
+    position: absolute;
+    background-color: white;
+    bottom: 5%;
+    right: 5%;
+}
