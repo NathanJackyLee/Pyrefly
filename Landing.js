@@ -7,8 +7,11 @@ function Landing(props){
     }
     return(
         <div className="bg-[url('./assets/MainMenuCropped1280x765.jpg')] bg-no-repeat h-screen w-full bg-cover">
+            <div className="Center">
             <h1>Pyrefly</h1>
             <button onClick={() => ignite()}>Start!</button>
+            </div>
+
         </div>
     );
 }
