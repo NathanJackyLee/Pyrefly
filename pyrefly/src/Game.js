@@ -38,7 +38,7 @@ function Game(props){
         ditext.current = "";
         setChapter(0);
         setIdx(0);
-        props.setbgm('bgm1.mp3');
+        props.setbgm('dreams.mp3');
     }
 
     if(chapter === 0) return (<StageSelect lang={props.lang} setChapter={setChapter} setRoot={props.setRoot}/>);
