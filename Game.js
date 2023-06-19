@@ -2,15 +2,9 @@ import React from "react";
 import {useRef} from "react";
 import StageSelect from "./StageSelect";
 import IDE from "./IDE";
-import testimg from "./assets/testimg.jpg";
 import story from "./data/story.json"
-import lsprite1 from "./assets/TestCharacteressTransparentBack.png";
-import bg1 from "./assets/Artificial_Park.jpg"
 import './Game.css';
-import Asep from "./assets/asep.png"
-import Meowton from "./assets/MeowtonFix.png"
-
-
+import ResolveBackground from "./ResolveBackground";
 
 function Game(props){
     const [chapter, setChapter] = React.useState(0);
@@ -52,7 +46,8 @@ function Game(props){
         let leg = story[chapter][idx]["action"].length;
         let i = 0; for(i=0;i<leg;i++){
             if(story[chapter][idx]["action"][i] === "bg"){
-                bg.current = "bg-[url('./assets/" + story[chapter][idx]["data"][i] + "')] bg-no-repeat h-screen w-full bg-cover";
+                // const a = require(`./assets/${story[chapter][idx]["data"][i]}`);
+                bg.current = ResolveBackground(story[chapter][idx]["data"][i]);
             }else if(story[chapter][idx]["action"][i] === "bgm"){
                 props.setbgm(story[chapter][idx]["data"][i]);
             }else if(story[chapter][idx]["action"][i] == "sfx"){
