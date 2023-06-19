@@ -3,7 +3,7 @@ import './Settings.css';
 
 function Settings(props){
     let bg = "bg-[url('./assets/CyberPunkSettings.jpg')]"
-    let screening = bg + " bg-no-repeat w-full h-screen";
+    let screening = bg + " bg-cover w-full h-screen";
     console.log(props)
     // let slide = 0.5;
     // const handleSlide = (x) =>{

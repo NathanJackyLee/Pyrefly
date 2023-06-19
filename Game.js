@@ -70,45 +70,48 @@ function Game(props){
             <IDE lang={props.lang} battle={battle_number} endBattle={endBattle}/>
         );
         else return(
-        <div className={bg.current}>
-            <div className="LeftSprite">
-                {/* Position for LeftSprite */}
-                <img src={lsprite.current} alt="didnt work"></img>
-                {/* <p>{lsprite.current}</p> <br/> */}
-            </div>
-                
-            <div className="RightSprite">
-                {/* Position For Right Sprite */}
-                <img src={rsprite.current} alt={rsprite.current}></img>
-                {/* <p>{rsprite.current}</p> <br/> */}
-            </div>
-            
-            <div className="TextBoxContainer">
-                <div className="NameBox">
-                    <p className="Speaking"> {diname.current}</p> <br/>
-                </div>
-                <div className="TextBoxRectangle">
-                    <div className="Textss">
-                        <p> {ditext.current}</p> <br/>
+            <div className="GameMainContainer">
+                        <div className={bg.current}>
+                    <div className="LeftSprite">
+                        {/* Position for LeftSprite */}
+                        <img src={lsprite.current} alt="didnt work"></img>
+                        {/* <p>{lsprite.current}</p> <br/> */}
                     </div>
+                        
+                    <div className="RightSprite">
+                        {/* Position For Right Sprite */}
+                        <img src={rsprite.current} alt={rsprite.current}></img>
+                        {/* <p>{rsprite.current}</p> <br/> */}
+                    </div>
+                    
+                    <div className="TextBoxContainer">
+                        <div className="NameBox">
+                            <p className="Speaking"> {diname.current}</p> <br/>
+                        </div>
+                        <div className="TextBoxRectangle">
+                            <div className="Textss">
+                                <p> {ditext.current}</p> <br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="AdvanceandEnd">
+                        <div className="Advance">
+                            <button onClick={() => advance()}>try advancing page</button>
+                        </div>
+                        
+                        {/* <button onClick={() => setInBattle(true)}>try entering battle</button> */}
+
+                        <div className="End">
+                            <button onClick={() => endChapter()}>try end of chapter</button>
+                        </div>
+                        
+                    </div>
+
+                    
                 </div>
             </div>
-
-            <div className="AdvanceandEnd">
-                <div className="Advance">
-                    <button onClick={() => advance()}>try advancing page</button>
-                </div>
-                
-                {/* <button onClick={() => setInBattle(true)}>try entering battle</button> */}
-
-                <div className="End">
-                    <button onClick={() => endChapter()}>try end of chapter</button>
-                </div>
-                
-            </div>
-
-            
-        </div>
+        
         );
     }
 }

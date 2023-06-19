@@ -6,7 +6,7 @@ function Landing(props){
         props.setRoot(0);
     }
     return(
-        <div className="bg-[url('./assets/MainMenuCropped1280x765.jpg')] bg-no-repeat h-screen w-full bg-cover">
+        <div className="bg-[url('./assets/MainMenuCropped1280x765.jpg')] bg-cover h-screen w-full bg-cover">
             <div className="Center">
             <h1>Pyrefly</h1>
             <button onClick={() => ignite()}>Start!</button>

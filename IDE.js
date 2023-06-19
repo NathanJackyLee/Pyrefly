@@ -3,10 +3,9 @@ import Editor from '@monaco-editor/react';
 import battledata from "./data/battledata.json";
 import axios from "axios";
 import "./IDE.css";
-import imagetest from "./assets/meowton.png";
-import chatbox from "./assets/ChatBoxIDETransParentBackground.png";
+import imagetest from "./assets/meowtonFix.png";
 import imagefeedback from "./assets/TextBoxIDE.png";
-import laptop from "./assets/LaptopIDE.png";
+
 
 function IDE(props){
     const question = battledata[props.battle]["question"][props.lang];
@@ -210,10 +209,7 @@ function IDE(props){
             <br/>    
             </div>
 
-            <div className="OutputBox">
-                <h5>Feedback</h5>
-                {/* {output} */}
-            </div>
+
 
             <div className="OutputTexts">
                 {output}    
@@ -227,7 +223,7 @@ function IDE(props){
 
             
 
-            <div className="UserInputBox">
+            {/* <div className="UserInputBox">
                 <h3 style={{ color: "white"}}>Custom input box:</h3>
                 <textarea
                     className = "input-box"
@@ -238,12 +234,12 @@ function IDE(props){
                 </textarea>
 
 
-            </div>
+            </div> */}
             <div className="TestSiteChars">
                 <img src={imagetest}></img>
             </div>
             <button className='CompileButton' onClick={handleTestRun}>Test Run!</button>
-            <button className='CompileButton' onClick={showHint}>show hint</button>
+            <button className='ShowHint' onClick={showHint}>show hint</button>
             {/* <button onClick={props.endBattle}>end battle</button> */}
         </div>
         
@@ -258,11 +254,11 @@ function IDE(props){
             </div>
             
             <br/>
-            <div className="Questions">
+            {/* <div className="Questions">
                 <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
                 <br/>
                 <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p>
-            </div>
+            </div> */}
 
             <div className="EditorBox">
                 <Editor
@@ -277,10 +273,19 @@ function IDE(props){
                 <br/>
             </div>
             <br/>
-            {output}
+       
             <div className="Feedback">
                 <img src={imagefeedback}></img>
             </div>
+
+            <div className="OutputTexts">
+                {output}    
+            </div>
+
+            <div className="TestSiteChars">
+                <img src={imagetest}></img>
+            </div>
+
             <button className="CompileButton" onClick={handleJudge}>Judge!</button>
             {win.current ? <button className ="ContinueEp" onClick={props.endBattle}>end battle</button>: <></>}
         </div>

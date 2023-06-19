@@ -37,11 +37,13 @@ div{
 }
 
 .EditorBox {
-    height: 450px;
-    width: 640px;
+    height: 45vh;
+    width: 50vw;
     position: absolute;
     left: 20px;
-    top: 70px;
+    top: 30px;
+    display: grid;
+    grid-row: 2;
 }
 
 .UserInputBox{
@@ -59,18 +61,39 @@ textarea {
     
 }
 
-.CompileButton {
-    position: absolute;
-    background-color: white;
+.ShowHint {
+    /* position: absolute; */
+    background-color: green;
      
 }
 
-.CompileButton {
-    width: 250px;
+.ShowHint {
+    width: 10vw;
     height: 100px;
-    right: 620px; 
-    bottom: 120px;
+    /* right: 620px;  */
+    /* bottom: 120px; */
+    display: grid;
+    grid-row:5;
+    grid-column: 2;
+    align-items: center;
     border-radius: 25px;
+    position: relative;
+    bottom: 5vh;
+}
+
+.CompileButton {
+    /* position: absolute; */
+    background-color: white;
+    width: 10vw;
+    height: 100px;
+    display: grid;
+    grid-row: 5;
+    grid-column: 1;
+    bottom: 5vh;
+    align-items: center;
+    border-radius: 25px;
+    position: relative;
+    /* bottom: 50px; */
 }
 
 .TestSiteChars {
@@ -87,23 +110,21 @@ img{
 
 .OutputBox{
     position: absolute;
-    top: 120px;
-    
-    right: 150px;
-    /* background-color: white; */
+    display: grid;
+    grid-column: 4;
+    grid-row: 2;
     width: 310px;
     height: 200px;
-
-    
 }
 
 .OutputTexts{
     position: absolute;
-    top: 80px;
-    right: 10px;
-    /* background-color: white; */
+    top: 220px;
+    right: 165px;
     width: 310px;
     height: 200px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -122,7 +143,7 @@ img{
     right: 150px;
     top: 1rem;
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
     z-index: -1;
     display: grid;
     /* width: 390px; */
@@ -130,33 +151,56 @@ img{
 
 .ChangeMode{
     color: green;
-    position: absolute;
-    left:20px;
+    position: relative;
+    /* left:20px; */
     top: 5px;
-
+    align-items: center;
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
 }
 
 .ChangeModeYes{
     color: red;
-    position: absolute;
-    left:20px;
+    position: relative;
+    /* left:20px; */
     top: 5px;
+    align-items: center;
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
 }
 
 .questionbox{
     position: absolute;
     display: grid;
     left: 20px;
-    top: 30px;
+    top: 100px;
     grid-row: 1;
     grid-column: 1;
 }
 
 .ContinueEp{
-    position: absolute;
+    position: relative;
     color: black;
-    bottom: 120px;
-    right: 35%;
+    /* bottom: 120px; */
+    /* right: 35%; */
+    display: grid;
+    grid-row: 5;
+    grid-column: 2;
+    align-items: center;
+    bottom: 5vh;
+
     background-color: white;
     width: 150px;
     height: 100px;
@@ -164,18 +208,3 @@ img{
 
 }
 
-@media (max-width:1272px) {
-    .IDE{
-        width: 90%;
-        height: 60%;
-    }
-    
-    .EditorBox{
-        height: 35vh;
-        width: 50%;
-    }
-
-
-
-
-}
