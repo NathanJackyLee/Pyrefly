@@ -11,16 +11,8 @@ function MainMenu(props){
     return(
     <div className='MainMenuMainContainer'>
         <div className= {screening}>
+            <div className="RightRectangle"></div>
             
-            <div style={{
-                position: 'fixed',
-                top: 0,
-                right: 0,
-                width: '390px', 
-                height: '765px',
-                backgroundColor: 'rgba(217, 217, 217, 1)'}}>
-                </div>
-
             <div className ="testingmain">
                 <div className='Pyrefly'>
                     <h1>{props.lang === 0 ? "PyreFLY" : "PyreFLY"}</h1>
