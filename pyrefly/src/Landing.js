@@ -2,7 +2,7 @@ import './Landing.css';
 
 function Landing(props){
     const ignite = () =>{
-        props.setbgm("bgm1.mp3");
+        props.setbgm("dreams.mp3");
         props.setRoot(0);
     }
     return(
