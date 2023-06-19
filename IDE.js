@@ -3,7 +3,7 @@ import Editor from '@monaco-editor/react';
 import battledata from "./data/battledata.json";
 import axios from "axios";
 import "./IDE.css";
-import imagetest from "./assets/MeowtonFix.png";
+import imagetest from "./assets/meowton.png";
 import chatbox from "./assets/ChatBoxIDETransParentBackground.png";
 import imagefeedback from "./assets/TextBoxIDE.png";
 import laptop from "./assets/LaptopIDE.png";
