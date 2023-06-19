@@ -1,76 +1,99 @@
 html,body,div{
-    overflow: hidden;
+  overflow: hidden;
+}
+html,body{
+  background-color: slategrey;
+}
+
+.MainMenuMainContainer {
+  overflow-x: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1270px;
+  height: 765px;
+  /* width: 90%; */
+  /* height: 90%; */
+  border-color: #2B0B3A;
+  border-width: 10px;
+}
+
+.RightRectangle{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 390px;
+  height: 765px;
+  background-color: rgba(217, 217, 217, 1);
+
+}
+
+.button_ {
+  color: #556688;
+  padding: 10px 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 0px;
+  display: grid;
+  border-radius: 10px;
+  /* margin-right: 100px; */
+}
+
+h1 {
+  padding-top: 100px;
+  padding-bottom: 50px  ;
+  display: center;
+  margin-left: 70px;
+  font-size: 60px;
+  font-weight: bold;
+  margin-right: 0%;
+}
+
+.testingmain{
+  position: absolute;
+  top: 35%;
+  right: -9%;
+  transform: translate(-50%, -50%);
+  justify-content: right;
+}
+
+.Pyrefly {
+font-family: 'Podkova';
+font-style: normal;
+font-weight: 400;
+font-size: 75px;
+width: 320px;
+line-height: 83px;
+color: #2B0B3A;
+text-shadow: 0 0 8px #fff, 0 0 12px #fff, 0 0 16px #fff; /* Define multiple text shadows with increasing blur and color */
+animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9737c4, 0 0 40px #9737c4, 0 0 50px #9737c4, 0 0 60px #9737c4;
   }
-  html,body{
-    background-color: slategrey;
+  50% {
+    text-shadow: none;
   }
-  
-  .MainMenuMainContainer {
-    overflow-x: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1270px;
-    height: 765px;
-    border-color: #2B0B3A;
-    border-width: 10px;
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9737c4, 0 0 40px #9737c4, 0 0 50px #9737c4, 0 0 60px #9737c4;
   }
-  
-  
-  
-  .button_ {
-    color: #556688;
-    padding: 10px 50px;
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    margin-top: 20px;
-    margin-left: 0px;
-    display: grid;
-    border-radius: 10px;
-    margin-right: 100px;
+}
+
+@media (max-width: 1272px) {
+  .MainMenuMainContainer{
+    height: 60%;
+    width: 90%;
   }
-  
-  h1 {
-    padding-top: 100px;
-    padding-bottom: 50px  ;
-    display: center;
-    margin-left: 70px;
-    font-size: 60px;
-    font-weight: bold;
-    margin-right: 0%;
+  .RightRectangle{
+    z-index: 0;
   }
-  
+
   .testingmain{
-    position: absolute;
-    top: 35%;
-    right: -8%;
-    transform: translate(-50%, -50%);
-    justify-content: right;
+    z-index: 1;
   }
-  
-  .Pyrefly {
-  font-family: 'Podkova';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 75px;
-  width: 320px;
-  line-height: 83px;
-  color: #2B0B3A;
-  text-shadow: 0 0 8px #fff, 0 0 12px #fff, 0 0 16px #fff; /* Define multiple text shadows with increasing blur and color */
-  animation: glow 2s ease-in-out infinite;
-  
-  }
-  
-  @keyframes glow {
-    0% {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9737c4, 0 0 40px #9737c4, 0 0 50px #9737c4, 0 0 60px #9737c4;
-    }
-    50% {
-      text-shadow: none;
-    }
-    100% {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9737c4, 0 0 40px #9737c4, 0 0 50px #9737c4, 0 0 60px #9737c4;
-    }
-  }
+}
