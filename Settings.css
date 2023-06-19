@@ -135,3 +135,10 @@ html, body, div {
 .Darker{
     filter: brightness(0.3);
 }
+
+@media (max-width: 1272px){
+    .SettingsMainContainer{
+        height: 60%;
+        width: 90%;
+    }
+}
