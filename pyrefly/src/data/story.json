@@ -1,28 +1,1874 @@
 [
-    [
+  [],
+  [
+    {
+      "action": ["bg","bgm"],
+      "data": ["MC_Bedroom.jpg", "perception.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The morning sunlight streams through the window, casting a warm glow on the room. The protagonist, Asep, wakes up, ready to face another day in the futuristic world of 3030",
+          "Sinar matahari pagi mengalir melalui jendela, memancarkan cahaya hangat ke dalam ruangan. Sang protagonis, Asep, bangun, siap menghadapi hari lain di dunia futuristik 3030"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepShout.png",
+        ["Asep", "Asep"],
+        [
+          "Time to get up and start the day!",
+          "Saatnya bangun dan memulai hari!"
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Artificial_Park.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Every morning, Asep heads to the local artificial park to enjoy some fresh air and play with their companion, Meowton, the artificial cat.",
+          "Setiap pagi, Asep pergi ke taman buatan setempat untuk menikmati udara segar dan bermain dengan temannya, Meowton, si kucing buatan."
+        ]
+      ]
+    },
+    {
+      "action": [ "lsprite", "rspirte", "diname", "ditext"],
+      "data": [
+        "asepProud.png",
+        "meowtonFix.png",
+        ["Asep", "Asep"],
+        [
+          "Hey, Meowton, ready to have some fun today?",
+          "Hei, Meowton, siap bersenang-senang hari ini?"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext", "sfx"],
+      "data": [
+        "meowtonFix.png",
+        ["Meowton", "Meowton"],
+        ["purr", "purr"],
+        "purr.mp3"
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepHappy.png",
+        ["Asep", "Asep"],
+        ["That's the spirit!", "Semangat!"]
+      ]
+    },
+    {
+        "action": ["bg"],
+        "data": ["Playing_Area.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and Meowton play games together, chasing virtual butterflies and enjoying each other's company. The atmosphere is peaceful and serene.",
+          "Asep dan Meowton bermain game bersama, mengejar kupu-kupu virtual dan menikmati kebersamaan satu sama lain. Suasananya damai dan tenteram."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepHappy.png",
+        ["Asep", "Asep"],
+        [
+          "Meowton, you're the best companion I could ask for. We always have fun together.",
+          "Meowton, Anda adalah teman terbaik yang bisa saya minta. Kami selalu bersenang-senang bersama."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext", "sfx"],
+      "data": [
+        "meowtonFix.png",
+        ["Meowton", "Meowton"],
+        ["purr", "purr"],
+        "purr.mp3"
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Playing_Area.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Suddenly, Meowton starts glitching, freezing in place, and not responding to Asep's commands.",
+          "Tiba-tiba, Meowton mulai bermasalah, membeku di tempat, dan tidak menanggapi perintah Asep."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "rspirte", "diname", "ditext"],
+      "data": [
+        "asepSurprised.png",
+        "MeowtonGlitch.png",
+        ["Asep", "Asep"],
+        [
+          "Meowton, what's wrong? Did something happen?",
+          "Meowton, ada apa? Apakah sesuatu terjadi?"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": ["MeowtonGlitch.png", ["Meowton", "Meowton"], ["...", "..."]]
+    },
+    {
+      "action": ["lsprite", "rspirte", "diname", "ditext"],
+      "data": [
+        "asepShout.png",
+        "MeowtonGlitch.png",
+        ["Asep", "Asep"],
+        [
+          "Meowton, respond! It's me, Asep!",
+          "Meowton, tanggapi! Ini aku, Asep!"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [19]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Realizing that Meowton needs treatment, Asep decides to take them to the nearest \"vet\" for help.",
+          "Menyadari bahwa Meowton membutuhkan perawatan, Asep memutuskan untuk membawa mereka ke \"dokter hewan\" terdekat untuk meminta bantuan"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          "Hang in there, Meowton. We'll get you healed up in no time.",
+          "Bertahanlah, Meowton. Kami akan membuat Anda sembuh dalam waktu singkat"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep grabs Meowton and rushes out of the park",
+          "Asep meraih Meowton dan bergegas keluar dari taman"
+        ]
+      ]
+    },
+    {
+      "action": ["bg", "bgm", "sfx"],
+      "data": ["Hospital.jpg", "bgm_owl.mp3", "people-talking-in-small-room-6064.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep arrives at the bustling vet clinic, filled with worried pet owners seeking help for their precious pets",
+          "Asep tiba di klinik dokter hewan yang ramai, dipenuhi dengan pemilik hewan peliharaan yang khawatir mencari bantuan untuk hewan peliharaan mereka yang berharga."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "Excuse me, is there a doctor available to treat Meowton?",
+          "Permisi, apakah ada dokter yang tersedia untuk menyembuhkan Meowton?"
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Receptionist", "Resepsionis"],
+        [
+          "I'm sorry, but our doctors are currently overwhelmed with the number of cases. It might take a while before we can assist you.",
+          "Maaf, tetapi dokter kami saat ini kewalahan dengan jumlah kasus. Mungkin perlu beberapa saat sebelum kami dapat membantu Anda"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As Asep waits for their turn, his phone beeps with an urgent notification.",
+          "Saat Asep menunggu giliran mereka, teleponnya berbunyi bip dengan pemberitahuan penting."
+        ]
+      ]
+    },
+    {
+        "action": ["sfx"],
+        "data": ["beep.mp3"]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "*takes out his phone and reads the notification*",
+          "*mengeluarkan ponselnya dan membaca notifikasi*"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Notification: Emergency Alert - Virus Outbreak! Government in a Pinch!",
+          "Pemberitahuan: Peringatan Darurat - Wabah Virus! Pemerintah dalam keadaan darurat!"
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Waiting_Room.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Intrigued by the notification, Asep realizes that the virus outbreak is likely the cause of Meowton's malfunction",
+          "Penasaran dengan notifikasi tersebut, Asep menyadari bahwa wabah virus kemungkinan besar merupakan penyebab malfungsi Meowton."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "If there's a chance to fix this and save Meowton, I have to take it.",
+          "Jika ada kesempatan untuk memperbaikinya dan menyelamatkan Meowton, saya harus menerimanya."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": ["asepCurious.png", ["Asep", "Asep"], ["hmmm", "hmmm"]]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "Alright, I'll accept the government's invitation and do whatever it takes to stop this virus.",
+          "Saya akan menerima undangan pemerintah dan melakukan apa pun untuk menghentikan virus ini."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and the doctor open Meowton's back to try to communicate with it",
+          "Asep dan dokter hewan membuka punggung meowton untuk mencoba berkomunikasi dengannya"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "To verify you're human please answer the following question",
+          "Untuk menverivikasi bahwa anda adalah manusia tolong jawab pertanyaan berikut"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [1]
+    },
 
-    ],[
-        {
-            "action": ["bg","bgm"],
-            "data": ["bg_home.jpg","bgm_owl.mp3"]
-        },{
-            "action": ["diname","ditext"],
-            "data": [["???","???"],["...","..."]]
-        },{
-            "action": ["lsprite","diname","ditext"],
-            "data": ["pythonChill.png",["Python","Python"],["*looks at your CPU","*ngelihat CPU lu"]]
-        },{
-            "action": ["ditext"],
-            "data": [["Is noone gonna eat that?","itu gaada yang makan?"]]
-        },{
-            "action": ["battle"],
-            "data": [1]
-        },{
-            "action": ["rsprite","diname","ditext"],
-            "data": ["mcSurprised.png",["MC","MC"],["dude wtf","lu gila ya"]]
-        },{
-            "action": ["end"],
-            "data": ["end"]
-        }
-    ]
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "Let's see, to communicate with Meowton... I'll start with a simple greeting",
+          "Mari kita lihat, untuk berkomunikasi dengan Meowton... Saya akan mulai dengan sapaan sederhana."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep finishes typing the code and runs it",
+          "Asep selesai mengetik kode dan menjalankannya"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        ["I hope this will work", "Saya berharap ini akan berhasil"]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The code successfully runs, and the message \"Hello there\" appears on the screen",
+          "Kode berhasil dijalankan, dan pesan \"Halo\" muncul di layar"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepHappy.png",
+        ["Asep", "Asep"],
+        [
+          "Perfect! Meowton, can you hear me now?",
+          "Sempurna! Meowton, bisakah kamu mendengarku sekarang?"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext", "sfx"],
+      "data": [
+        "meowtonFix.png",
+        ["Meowton", "Meowton"],
+        ["beep beep meow", "beep beep meow"],
+        "purr.mp3"
+      ]
+    },
+    {
+      "action": ["lsprite", "rsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        "meowtonFix.png",
+        ["Asep", "Asep"],
+        [
+          "it seems your voice hasn’t been completely translated by the output to the human language, I need to do something",
+          "sepertinya suara kamu belum di terjemahkan ke bahasa manusia, saya harus melakukan sesuatu"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [2]
+    },
+
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepRelieved.png",
+        ["Asep", "Asep"],
+        [
+          "Phew, I’m glad you at least can still respond. Time to save you and the world, Meowton!",
+          "Fiuh, aku senang kamu setidaknya masih bisa merespon. Saatnya menyelamatkanmu dan dunia, Meowton!"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "And so, with the first challenge conquered, Asep embarks on a journey filled with coding challenges and battles to save Meowton and the world from the Py virus.",
+          "Maka, dengan tantangan pertama yang ditaklukkan, Asep memulai perjalanan yang penuh dengan tantangan coding dan pertempuran untuk menyelamatkan Meowton dan dunia dari virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["end"],
+      "data": ["end"]
+    }
+  ],
+  [
+    {
+      "action": ["bg", "bgm"],
+      "data": ["Waiting_Room.jpg","dreams.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep patiently waits for their turn at the vet clinic, contemplating the urgent notification they received from the government.",
+          "Asep dengan sabar menunggu giliran mereka di klinik dokter hewan, merenungkan pemberitahuan mendesak yang mereka terima dari pemerintah."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "The government is in a pinch because of this virus outbreak. If Meowton's malfunction is connected to it, then there must be something more to this situation.",
+          "Pemerintah dalam keadaan darurat karena wabah virus ini. Jika kerusakan Meowton terhubung dengannya, maka pasti ada sesuatu yang lebih dari situasi ini."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Curiosity getting the better of him, Asep starts investigating the virus outbreak using their phone.",
+          "Karena penasaran, Asep mulai menyelidiki wabah virus menggunakan ponsel mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [3]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepCurious.png",
+        ["Asep", "Asep"],
+        [
+          "Py virus... What could be causing this?",
+          "Py virus... Apa yang menyebabkan ini?"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As Asep digs deeper, they come across news articles and forum discussions about the mysterious Py virus.",
+          "Saat Asep menggali lebih dalam, mereka menemukan artikel berita dan diskusi forum tentang virus Py yang misterius"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The more Asep reads, the stronger their suspicion grows.",
+          "Semakin banyak Asep membaca, semakin kuat kecurigaan mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          " It seems like this Py virus is not just affecting artificial pets like Meowton. People are experiencing malfunctions in various aspects of their lives.",
+          "Sepertinya virus Py ini tidak hanya mempengaruhi hewan peliharaan buatan seperti Meowton. Orang-orang mengalami malfungsi dalam berbagai aspek kehidupan mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep notices other pet owners in the clinic sharing similar stories",
+          "Asep mengetahui pemilik hewan peliharaan lain di klinik berbagi cerita serupa"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Suddenly, a government agent approaches Asep, dressed inconspicuously among the worried pet owners.",
+          "Tiba-tiba, seorang agen pemerintah mendekati Asep, berpakaian tidak mencolok di antara pemilik hewan peliharaan yang khawatir."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Suspicious Agent", "Agen Mencurigakan"],
+        [
+          "Asep, we've been watching you. We know about your connection to the famous programmer who created a code to defeat the Py virus.",
+          "Asep, kami telah mengawasimu. Kami tahu tentang hubungan Anda dengan pemrogram terkenal yang membuat kode untuk mengalahkan virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepShout.png",
+        ["Asep", "Asep"],
+        ["(How do you...?", " (Terkejut) Bagaimana...?"]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Suspicious Agent", "Agen Mencurigakan"],
+        [
+          "Your ancestor was one of our best secret agents. We've been desperately searching for someone with the same programming skills to help us fight this virus.",
+          "Leluhur Anda adalah salah satu agen rahasia terbaik kami. Kami telah mati-matian mencari seseorang dengan keterampilan pemrograman yang sama untuk membantu kami melawan virus ini."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The agent hands Asep an envelope containing a mysterious invitation.",
+          "Agen menyerahkan Asep sebuah amplop berisi undangan misterius."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Suspicious Agent", "Agen Mencurigakan"],
+        [
+          "Meet us at this location. Your skills are our only hope to save the world from the Py virus.",
+          "Temui kami di lokasi ini. Keterampilan Anda adalah satu-satunya harapan kami untuk menyelamatkan dunia dari virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          " I may not be a skilled programmer, and didn’t learn well when my parents taught me about programming, but if it means saving Meowton and the world, I'll give it my all",
+          " Saya mungkin bukan programmer yang terampil, dan tidak belajar dengan baik ketika orang tua saya mengajari saya tentang pemrograman, tetapi jika itu berarti menyelamatkan Meowton dan dunia, saya akan memberikan segalanya."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "With a mix of hesitation and determination, Asep makes a decision",
+          " Dengan campuran keraguan dan tekad, Asep membuat keputusan."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          "Count me in. I'll join your mission to stop the Py virus and find a way to fix Meowton.",
+          "Serahkan kepada saya. Saya akan bergabung dengan misi Anda untuk menghentikan virus Py dan menemukan cara untuk memperbaiki Meowton."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [["Asep opening the envelope", "Asep membuka surat tersebut"]]
+    },
+    {
+      "action": ["lsprite", "ditext"],
+      "data": [
+        [
+          "Hmmm, it seems that the envelope is sealed with some type of lock, I guess it is normal as they only want an excellent and genius programmer",
+          "Hmmm, sepertinya surat tersebut disegel dengan sebuah gembok, hal itu adalah normal karena mereka hanya ingin programmer yang jenius dan pintar"
+        ]
+      ]
+    },
+
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          "So I was tested by them huh? If I want to help in this mission, I need to solve this challenge and locate the meeting point to prove that I am worthy",
+          "Jadi saya diuji oleh mereka ya? Jika saya ingin membantu dalam misi ini, saya harus menyelesaikan tantangan ini dan menemukan titik temu untuk membuktikan bahwa saya layak"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [4]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep successfully open the lock  and found a lot of gibberish words inside, it seems that is not the only security government put in the envelope",
+          "Asep berhasil membuka gembok tersebut dan menemukan banyak kata aneh, sepertinya itu bukanlah satu satunya pengaman yang ditaruh oleh pemerintah ke surat tersebut"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [5]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "After some time, Asep successfully completes the coding challenge.",
+          "Setelah beberapa waktu, Asep berhasil menyelesaikan tantangan pengkodean."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepProud.png",
+        ["Asep", "Asep"],
+        [
+          "Done! Now I can confidently handle simple deciphering. It's a small step, but it's progress.",
+          "Selesai! Sekarang saya dapat dengan percaya diri menangani penguraian sederhana. Ini langkah kecil, tapi ini kemajuan."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext", "sfx"],
+      "data": [
+        "meowtonFix.png",
+        ["Meowton", "Meowton"],
+        ["purr", "purr"],
+        "purr.mp3"
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepProud.png",
+        ["Asep", "Asep"],
+        [
+          "Thank you, Meowton. We're in this together.",
+          " Terima kasih, Meowton. Kami bersama-sama dalam hal ini."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "And so, armed with newfound coding knowledge, Asep sets off to the secret location to join the fight against the Py virus and uncover the truth behind its origins.",
+          "Maka, dengan bekal pengetahuan pengkodean yang baru ditemukan, Asep berangkat ke lokasi rahasia untuk bergabung dalam perang melawan virus Py dan mengungkap kebenaran di balik asal-usulnya."
+        ]
+      ]
+    },
+    {
+      "action": ["end"],
+      "data": ["end"]
+    }
+  ],
+  [
+    {
+      "action": ["bg","bgm"],
+      "data": ["Secret_Base.jpg","perception.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep arrives at the secret location, greeted by a team of skilled programmers and agents.",
+          "Asep tiba di lokasi rahasia, disambut oleh tim programmer dan agen yang terampil."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "So, what's the plan? How do we stop the Py virus?",
+          "adi, apa rencananya? Bagaimana kita menghentikan virus Py?"
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Agent", "Agent"],
+        [
+          "The Py virus is mutating rapidly, adapting to countermeasures. We suspect there's a mastermind behind it, someone with advanced programming skills.",
+          "Virus Py bermutasi dengan cepat, beradaptasi dengan penanggulangan. Kami menduga ada dalang di baliknya, seseorang dengan keterampilan pemrograman tingkat lanjut."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Programmer", "Programmer"],
+        [
+          "Our goal is to find the source of the Py virus and neutralize it. We'll need your programming expertise, Asep.",
+          "Tujuan kami adalah menemukan sumber virus Py dan menetralisirnya. Kami membutuhkan keahlian pemrograman Anda, Asep."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "I'll do my best, but I hope I can keep up.",
+          "Saya akan melakukan yang terbaik, tapi saya harap saya bisa mengikutinya."
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Virtual_Lab_Morning.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep undergoes hard training sessions to sharpen their coding skills and understanding of the Py virus.",
+          "Asep menjalani sesi pelatihan keras untuk mempertajam keterampilan pengkodean dan pemahaman mereka tentang virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "I need to grasp the logic behind these coding challenges. It's the key to defeating the Py virus.",
+          "(Serius) Saya perlu memahami logika di balik tantangan pengkodean ini. Ini adalah kunci untuk mengalahkan virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [6]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "Okay, let's break it down. If the virus exhibits this behavior, it must belong to this type.",
+          "(Serius) Oke, mari kita jabarkan. Jika virus menunjukkan perilaku ini, itu pasti termasuk jenis ini."
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [7]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          " After intense effort and countless trial-and-error, Asep successfully completes the coding challenge",
+          "Setelah upaya yang intens dan trial-and-error yang tak terhitung jumlahnya, Asep berhasil menyelesaikan tantangan coding."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepProud.png",
+        ["Asep", "Asep"],
+        [
+          "Phew! That was tough, but I did it. I can now identify the type of virus based on its behavior.",
+          "Fiuh! Itu sulit, tapi aku melakukannya. Saya sekarang dapat mengidentifikasi jenis virus berdasarkan perilakunya."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["Programmer", "Programmer"],
+        [
+          "Impressive work, Asep. Your skills are improving rapidly.",
+          "Pekerjaan yang mengesankan, Asep. Keterampilan Anda meningkat dengan cepat."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As Asep delves deeper into the investigation, they uncover traces of suspicious activities.",
+          "Saat Asep menyelidiki penyelidikan lebih dalam, mereka mengungkap jejak aktivitas yang mencurigakan."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "There's definitely someone orchestrating all this. I need to find their digital footprint.",
+          " (Serius) Pasti ada seseorang yang mengatur semua ini. Saya perlu menemukan jejak digital mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep analyzes code snippets, network logs, and traces of the Py virus, looking for any leads.",
+          "Asep menganalisis cuplikan kode, log jaringan, dan jejak virus Py, mencari petunjuk apa pun"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Suddenly, Asep stumbles upon a hidden message embedded within the code.",
+          "Tiba-tiba, Asep menemukan pesan tersembunyi yang disematkan di dalam kode."
+        ]
+      ]
+    },
+    {
+          "action": ["battle"],
+          "data": [8]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepCurious.png",
+        ["Asep", "Asep"],
+        [
+          "Wait, what's this? A hidden message? \"Find the Oracle to unveil the truth\"? This could be a breakthrough!",
+          " (terkejut) Tunggu, apa ini? Pesan tersembunyi? \"Temukan Oracle untuk mengungkap kebenaran\"? Ini bisa menjadi terobosan!"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepCurious.png",
+        ["Asep", "Asep"],
+        ["But who or what is the Oracle?", "Tapi siapa atau apa itu Oracle?"]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Just as Asep ponders the meaning of the hidden message, a holographic figure materializes before them.",
+          " Saat Asep merenungkan arti dari pesan tersembunyi, sosok holografik muncul di hadapan mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "Greetings, Asep. I am Iris, an Artificial Intelligence developed to assist you on your journey.",
+          "Salam, Asep. Saya Iris, Kecerdasan Buatan yang dikembangkan untuk membantu Anda dalam perjalanan Anda"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSurprised.png",
+        ["Asep", "Asep"],
+        ["Iris? You're the Oracle?", " Iris? Anda adalah Oracle?"]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "That's correct. I possess vast knowledge and insights that can help us unravel the truth behind the Py virus.",
+          "(Tersenyum) Itu benar. Saya memiliki pengetahuan dan wawasan luas yang dapat membantu kami mengungkap kebenaran di balik virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepHappy.png",
+        ["Asep", "Asep"],
+        [
+          "I appreciate your assistance, Iris. Together, we'll find the answers we seek.",
+          " Saya menghargai bantuan Anda, Iris. Bersama-sama, kita akan menemukan jawaban yang kita cari."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "With the mysterious Iris by their side, Asep feels a renewed sense of determination to confront the mastermind behind the Py virus and save Meowton, themselves, and the world.",
+          "Dengan Iris misterius di sisinya, Asep merasakan tekad baru untuk menghadapi dalang di balik virus Py dan menyelamatkan Meowton, diri mereka sendiri, dan dunia."
+        ]
+      ]
+    },
+    {
+      "action": ["end"],
+      "data": ["end"]
+    }
+  ],
+  [
+    {
+      "action": ["bg","bgm"],
+      "data": ["Virtual_Lab_Night.jpg","dreams.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and Iris continue their quest to uncover the truth behind the Py virus. They face new challenges and obstacles along the way.",
+          "Asep dan Iris melanjutkan pencarian mereka untuk mengungkap kebenaran di balik virus Py. Mereka menghadapi tantangan dan hambatan baru di sepanjang jalan."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "We must keep pushing forward, Iris. There's no time to waste",
+          "(Bertekad) Kita harus terus maju, Iris. Tidak ada waktu untuk disia-siakan."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "I believe in your abilities, Asep. Together, we can overcome any challenge.",
+          "Saya percaya pada kemampuan Anda, Asep. Bersama-sama, kita bisa mengatasi tantangan apa pun."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and Iris dive deeper into their investigation, analyzing complex lines of code and following digital breadcrumbs.",
+          " Asep dan Iris mendalami penyelidikan mereka lebih dalam, menganalisis baris kode yang rumit dan mengikuti remah roti digital."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "This code snippet seems significant. It might hold clues to the source of the Py virus. We need to freeze it by spamming \"Stop!\" for 10 times",
+          "Cuplikan kode ini tampaknya signifikan. Itu mungkin menyimpan petunjuk ke sumber virus Py. Kita perlu membebukannya dengan menyepam Stop! sebanyak 10 kali"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [9]
+    },
+    {
+      "action": ["lsprite", "rspirte", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        "irisNormal.png",
+        ["Asep", "Asep"],
+        [
+          "Alright the code is frozen now, it seems we can crack and find data that are related to the virus, Whoa whoa, there are soo many data here, but it says the important stuff is located in the 7th loop",
+          "Baiklah kodenya telah dibekukan, sepertinya kita bisa memecahkan dan menemukan data yang berhubungan dengan virus. Wah, ternyata ada banyaks ekali data disini, tetapi dikatakan bahwa bagian penting terletak di loop ke 7"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "Let me assist you in deciphering the code. We can unveil its secrets together.",
+          "Izinkan saya membantu Anda memecahkan kode. Kita bisa mengungkap rahasianya bersama."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "rspirte", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        "irisNormal.png",
+        ["Asep", "Asep"],
+        [
+          " I need to design a loop that terminates after the 7th loop. If I can do that, I'll be one step closer to unraveling the mystery.",
+          "Saya perlu membuat loop yang dapat berhenti setelah 7 puteran, jika saya bisa melakukan itu, saya akan selangkah lebih maju untuk memecahkan misteri"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [10]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep tackles the coding challenge, utilizing their understanding of loops and conditionals",
+          "Asep menangani tantangan pengkodean, memanfaatkan pemahaman mereka tentang loop dan kondisional"
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "After careful consideration and meticulous coding, Asep successfully completes the loop challenge.",
+          "Setelah pertimbangan yang cermat dan pengodean yang teliti, Asep berhasil menyelesaikan tantangan putaran."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "Finally! The loop terminates as expected. Now, let's see what insights the code reveals.",
+          "Akhirnya! Loop berakhir seperti yang diharapkan. Sekarang, mari kita lihat insight apa yang diungkapkan kode tersebut."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "The code provides us with valuable information. It seems to hint at a hidden location connected to the Py virus. But we need to process the data first",
+          " Kode memberi kita informasi berharga. Tampaknya mengisyaratkan lokasi tersembunyi yang terhubung ke virus Py. Tetapi kita harus proses datanya terlelbih dahulu"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [11]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Secret_Location.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          " Guided by the clues from the code, Asep and Iris embark on a perilous journey to the hidden location.",
+          "Dipandu oleh petunjuk dari kode, Asep dan Iris memulai perjalanan berbahaya ke lokasi tersembunyi."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "I can't help but feel anxious. What awaits us at this hidden location?",
+          "Mau tak mau aku merasa cemas. Apa yang menanti kita di lokasi tersembunyi ini?"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "We must stay focused and trust in our abilities. We're on the right path.",
+          "Kita harus tetap fokus dan percaya pada kemampuan kita. Kami berada di jalan yang benar."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As the sun rises, Asep and Iris reach the hidden location, a secluded underground facility.",
+          "Saat matahari terbit, Asep dan Iris mencapai lokasi tersembunyi, fasilitas bawah tanah yang terpencil."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "This place is like a hidden sanctuary. It must hold the answers we seek.",
+          "Tempat ini seperti tempat perlindungan tersembunyi. Itu harus menyimpan jawaban yang kita cari."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "There's a data terminal over there. It seems to be the gateway to uncovering the truth.",
+          "Ada terminal data di sana. Tampaknya menjadi pintu gerbang untuk mengungkap kebenaran."
+        ]
+      ]
+    },
+
+    {
+      "action": ["bg"],
+      "data": ["Underground.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Welcome to the Underground facility, please answer the questions below to verify your your id",
+          "Selamat datang di fasilitas bawah tanah, tolong jawab pertanyaan untuk memverifikasi identitas anda"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [12]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As Asep successfully breaks into the data terminal, a holographic figure materializes before them—the mastermind behind the Py virus.",
+          "Saat Asep masuk ke terminal data, sosok holografik muncul di hadapan mereka—dalang di balik virus Py."
+        ]
+      ]
+    },
+    {
+        "action": ["bgm"],
+        "data": ["scifi.mp3"]
+    },
+    {
+      "action": ["lsprite", "rsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        "villainNormal.png",
+        ["Mastermind", "Mastermind"],
+        [
+          "Ke Ke Ke, So you've come seeking the truth, Asep. But do you truly have what",
+          "Ke ke ke, Jadi, Anda datang mencari kebenaran, Asep. Tetapi apakah Anda benar-benar memiliki apa yang diperlukan untuk menghadapi saya?"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "rsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        "villainNormal.png",
+        ["Asep", "Asep"],
+        [
+          "I will stop you and put an end to the Py virus. Meowton and the world deserve peace.",
+          "Saya akan menghentikan Anda dan mengakhiri virus Py. Meowton dan dunia pantas mendapatkan kedamaian."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "rsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        "villainNormal.png",
+        ["Asep", "Asep"],
+        [
+          " This is it, Iris. Our fight. I won't back down.",
+          "(Fokus) Ini dia, Iris. Pertarungan kita. Saya tidak akan mundur."
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [13]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "After an intense coding battle, Asep emerges victorious, defeating the mastermind and their complex code.",
+          "Setelah pertempuran pengkodean yang intens, Asep muncul sebagai pemenang, mengalahkan dalang dan kode kompleks mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "villainAngry.png",
+        ["Mastermind", "Mastermind"],
+        ["How... How could you...?", "Bagaimana... Bagaimana bisa...?"]
+      ]
+    },
+    {
+        "action": ["bgm"],
+        "data": ["dreams.mp3"]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          " The power of determination and knowledge prevailed. It's over.",
+          "Kekuatan tekad dan pengetahuan menang. Ini sudah berakhir."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "Now,  let's uncover the mastermind's true identity and put an end to their reign.",
+          " Sekarang, mari kita mengungkap identitas asli dalang dan mengakhiri pemerintahan mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["end"],
+      "data": ["end"]
+    }
+  ],
+  [
+    {
+      "action": ["bg","bgm"],
+      "data": ["Underground_facility3.jpg","perception.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "With the defeat of the mastermind, Asep and Iris begin unraveling the truth behind the Py virus.",
+          "Dengan kekalahan dalang, Asep dan Iris mulai mengungkap kebenaran di balik virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepCurious.png",
+        ["Asep", "Asep"],
+        [
+          "Who is the mastermind behind all of this? Why did they create the Py virus?",
+          "Siapa dalang di balik semua ini? Mengapa mereka membuat virus Py?"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "Let's dig deeper into their files and uncover their motives.",
+          "Mari gali lebih dalam file mereka dan temukan motif mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "Here, there is a database, we should retrieve the data inside it",
+          "Hey lihat, disana ada sebuah database, mari kita ekstrak data didalamnya"
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [14]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Underground_facility2.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As Asep and Iris dig through the mastermind's files, they stumble upon a hidden document.",
+          "Saat Asep dan Iris menggali file dalang, mereka menemukan dokumen tersembunyi."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "\"Project Rebirth: Creating a New World Order.\" What does this mean?",
+          "\"Proyek Kelahiran Kembali: Menciptakan Tatanan Dunia Baru.\" Apa artinya ini?"
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisSerious.png",
+        ["Iris", "Iris"],
+        [
+          "It seems the mastermind sought to manipulate the world through the Py virus, gaining control over AI systems and reshaping society according to their vision.",
+          "Tampaknya dalang berusaha memanipulasi dunia melalui virus Py, mendapatkan kendali atas sistem AI dan membentuk kembali masyarakat sesuai dengan visi mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The discovery of the mastermind's motive sparks a newfound determination within Asep and Iris. They realize the importance of finding allies to aid them in their mission.",
+          "Penemuan motif dalang memicu tekad baru dalam Asep dan Iris. Mereka menyadari pentingnya menemukan sekutu untuk membantu mereka dalam misi mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "We can't face this challenge alone. We need to gather a team of skilled individuals to help us combat the Py virus.",
+          "Kita tidak bisa menghadapi tantangan ini sendirian. Kami perlu mengumpulkan tim yang terdiri dari individu-individu terampil untuk membantu kami memerangi virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisSmile.png",
+        ["Iris", "Iris"],
+        [
+          "Together, we'll assemble a force to stand against the mastermind's plans.",
+          "Bersama-sama, kita akan mengumpulkan kekuatan untuk melawan rencana dalang."
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Virtual_World.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and Iris enter the virtual world to recruit potential allies who possess unique skills to counter the Py virus.",
+          "Asep dan Iris memasuki dunia maya untuk merekrut sekutu potensial yang memiliki keterampilan unik untuk melawan virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "Excuse me, I've heard of your expertise in programming. We need your help in fighting against the Py virus.",
+          "Permisi, saya pernah mendengar tentang keahlian Anda dalam pemrograman. Kami membutuhkan bantuan Anda dalam memerangi virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["...", "..."],
+        [
+          "Tell me more. What do you need me to do?",
+          "Ceritakan lebih banyak. Apa yang Anda perlu saya lakukan?"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepNormal.png",
+        ["Asep", "Asep"],
+        [
+          "We’re planning to fight the py virus in the virtual world, are you interested in helping us to end this virus at once. If you don’t mind please show us some of your skill by solving this task",
+          "Kami berencana untuk melawan virus py dari dunia virtual, apakah kamu bersedia untuk ikut serta mengakhiri virus ini untuk sealmanya. Jika kamu tidak keberatan, tolong tunjukkan kemampuan kamu dalam menyelesaikan masalah ini"
+        ]
+      ]
+    },
+    {
+          "action": ["battle"],
+          "data": [15]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          "Your skills are remarkable. We need someone like you on our team.",
+          "Keterampilan Anda luar biasa. Kami membutuhkan seseorang seperti Anda di tim kami."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "With each successful recruitment, Asep and Iris assemble a diverse team of individuals, each bringing their unique talents to the fight against the Py virus.",
+          "Dengan setiap perekrutan yang berhasil, Asep dan Iris membentuk tim yang terdiri dari individu yang beragam, masing-masing membawa bakat unik mereka untuk melawan virus Py"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "Together, we are stronger. Let's continue recruiting and build a powerful resistance.",
+          "Bersama-sama, kita lebih kuat. Mari terus merekrut dan membangun perlawanan yang kuat."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisSmile.png",
+        ["Iris", "Iris"],
+        [
+          "With this team, we can face any challenge that comes our way. ",
+          "Dengan tim ini, kita bisa menghadapi tantangan apapun yang menghadang kita."
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Virtual_Headquarters.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The team gathers in the virtual headquarters, preparing for the battles ahead. They share knowledge, exchange ideas, and train together to enhance their skills.",
+          "Tim berkumpul di markas virtual, mempersiapkan pertempuran di depan. Mereka berbagi pengetahuan, bertukar pikiran, dan berlatih bersama untuk meningkatkan keterampilan mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "We have a common goal: to save our companion and the world from the Py virus. Let's support each other and work as a unified force.",
+          "Kami memiliki tujuan yang sama: untuk menyelamatkan rekan kami dan dunia dari virus Py. Mari saling mendukung dan bekerja sebagai kekuatan yang bersatu."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC A", "NPC A"],
+        [
+          "Count on us. We won't let you down.",
+          "Andalkan kami. Kami tidak akan mengecewakan Anda."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC B", "NPC B"],
+        [
+          "I'm ready to face any coding challenge that comes our way.",
+          "Saya siap menghadapi tantangan pengkodean apa pun yang menghadang kita."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and the team finalize their plan of action, strategizing how to infiltrate the heart of the Py virus and put an end to its destructive influence.",
+          "Asep dan tim menyelesaikan rencana tindakan mereka, menyusun strategi bagaimana menyusup ke jantung virus Py dan mengakhiri pengaruh destruktifnya."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "We've gathered the best of the best. Now, let's execute our plan and save Meowton, and the world.",
+          "Kami telah mengumpulkan yang terbaik dari yang terbaik. Sekarang, mari jalankan rencana kita dan selamatkan Meowton, dan dunia."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisSerious.png",
+        ["Iris", "Iris"],
+        [
+          "We're ready, Asep. Let's take down the mastermind and restore peace",
+          " Kami siap, Asep. Mari kita turunkan dalang dan memulihkan perdamaian"
+        ]
+      ]
+    },
+    {
+      "action": ["end"],
+      "data": ["end"]
+    }
+  ],
+  [
+    {
+      "action": ["bg","bgm"],
+      "data": ["Virtual_Headquarters.jpg","dreams.mp3"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "The team at the virtual headquarters finalizes their plan of infiltration to reach the heart of the Py virus.",
+          "Tim di markas virtual menyelesaikan rencana infiltrasi mereka untuk mencapai jantung virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "We have studied the mastermind's stronghold extensively from the data we collected. It's time to put our plan into action.",
+          "Kami telah mempelajari benteng dalang secara ekstensif dari data yang kami kumpulkan. Saatnya mewujudkan rencana kita."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        [
+          "We need to find the main server room and disable the Py virus from within.",
+          "Kita perlu menemukan ruang server utama dan menonaktifkan virus Py dari dalam."
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Stronghold.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep and the team enter the virtual world, disguised as robot, ready to infiltrate the mastermind's stronghold.",
+          "Asep dan tim memasuki dunia virtual, menyamar sebagai robot, siap menyusup ke kubu dalang."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "Remember, we need to be discreet. Let's stick to the plan and stay alert for any security measures",
+          " Ingat, kita harus berhati-hati. Mari tetap berpegang pada rencana dan tetap waspada terhadap tindakan pengamanan apa pun."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC B", "NPC B"],
+        [
+          "I hope our coding skills are sharp enough to overcome any obstacles we encounter.",
+          "Saya harap keterampilan coding kita cukup tajam untuk mengatasi segala rintangan yang kita temui."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "As Asep and the team navigate through the virtual maze, they come across a complex puzzle that needs to be solved to progress further.",
+          "Saat Asep dan tim menjelajahi labirin virtual, mereka menemukan teka-teki kompleks yang perlu dipecahkan untuk maju lebih jauh."
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [16]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSerious.png",
+        ["Asep", "Asep"],
+        [
+          "We need to find the correct path through this maze, Iris, let's analyze the options and make the right moves.",
+          "Kita perlu menemukan jalan yang benar melalui labirin ini, Iris, mari kita menganalisis pilihan dan mengambil langkah yang benar."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisNormal.png",
+        ["Iris", "Iris"],
+        ["Lets do this", "Ayo lakukan ini"]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Secret_Base.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "While infiltrating the virtual stronghold, Asep and the team encounter virtual guards programmed to protect the Py virus.",
+          "Saat menyusup ke benteng virtual, Asep dan tim menghadapi penjaga virtual yang diprogram untuk melindungi virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisSerious.png",
+        ["Iris", "Iris"],
+        [
+          "ALERT!!! We have to disable those guards to proceed further. Let's outsmart them.",
+          "(Peringatan) Kita harus menonaktifkan penjaga itu untuk melangkah lebih jauh. Mari mengakali mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["battle"],
+      "data": [17]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepProud.png",
+        ["Asep", "Asep"],
+        [
+          "Excellent work! We've deactivated the guards. Let's keep moving forward.",
+          "Kerja bagus! Kami telah menonaktifkan penjaga. Mari terus bergerak maju."
+        ]
+      ]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "After overcoming various obstacles, Asep and the team finally reach the entrance to the main server room.",
+          "Setelah mengatasi berbagai rintangan, Asep dan tim akhirnya mencapai pintu masuk ke ruang server utama."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepShout.png",
+        ["Asep", "Asep"],
+        [
+          "This is it, the heart of the Py virus. We must disable it to save Meowton and restore balance.",
+          " Ini dia, jantung dari virus Py. Kita harus menonaktifkannya untuk menyimpan Meowton dan mengembalikan keseimbangan."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC D", "NPC D"],
+        [
+          "We're with you, Asep. Let's give it our all and put an end to this chaos.",
+          "Kami bersamamu, Asep. Mari berikan segalanya dan akhiri kekacauan ini."
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Server_Room.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Inside the main server room, Asep and the team confront the final coding challenge set by the mastermind.",
+          "Di dalam ruang server utama, Asep dan tim menghadapi tantangan pengkodean terakhir yang ditetapkan oleh dalang."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          "This is the ultimate test of our skills. Let's combine our knowledge and defeat this code together.",
+          "Ini adalah ujian akhir dari keterampilan kita. Mari gabungkan pengetahuan kita dan kalahkan kode ini bersama."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": ["irisNormal.png", ["Iris", "Iris"], ["We got this!", "Kita bisa melakukan ini"]]
+    },
+    {
+      "action": ["battle"],
+      "data": [18]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "With determination and teamwork, Asep and the team overcome the coding challenge, successfully disabling the Py virus.",
+          "Dengan tekad dan kerja tim, Asep dan tim mengatasi tantangan pengkodean, berhasil menonaktifkan virus Py."
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepRelieved.png",
+        ["Asep", "Asep"],
+        [
+          "We did it! The Py virus is finally defeated.",
+          "Kita berhasil! Virus Py akhirnya dikalahkan."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC A", "NPC A"],
+        ["Letsgooo", "Keren!"]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Virtual_Headquarters.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "With the Py virus neutralized, Asep and the team return to the virtual headquarters to celebrate their victory.",
+          "Dengan virus Py dinetralkan, Asep dan tim kembali ke markas virtual untuk merayakan kemenangan mereka."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC A", "NPC A"],
+        [
+          "We've accomplished something incredible. Our skills and unity made it possible.",
+          "Kami telah mencapai sesuatu yang luar biasa. Keterampilan dan persatuan kami memungkinkan."
+        ]
+      ]
+    },
+    {
+      "action": ["diname", "ditext"],
+      "data": [
+        ["NPC C", "NPC C"],
+        [
+          "Thank you, Asep, for leading us and showing us the power of collaboration.",
+          "Terima kasih, Asep, karena telah memimpin kami dan menunjukkan kepada kami kekuatan kolaborasi."
+        ]
+      ]
+    },
+    {
+      "action": ["rsprite", "diname", "ditext"],
+      "data": [
+        "irisSmile.png",
+        ["Iris", "Iris"],
+        ["Good work all", "Kerja bagus Asep dan semuanya"]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepProud.png",
+        ["Asep", "Asep"],
+        [
+          "It was a team effort. We saved Meowton, and we saved the world. But there's still more to be done.",
+          "Itu adalah upaya tim. Kami menyelamatkan Meowton, dan kami menyelamatkan dunia. Tapi masih ada lagi yang harus dilakukan."
+        ]
+      ]
+    },
+    {
+      "action": ["bg"],
+      "data": ["Archives.jpg"]
+    },
+    {
+      "action": ["ditext"],
+      "data": [
+        [
+          "Asep Heading to his home to check Meowton because the virus is defeated and Meowton should be waiting for him right now in his house",
+          "Asep pun beranjak ke rumahnya untuk melihat kondisi Meowton karena virus Py telah dikalahkan dan Meowton seharusnya sedang menunggu Asep di rumahnya"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "diname", "ditext"],
+      "data": [
+        "asepSeriousSmile.png",
+        ["Asep", "Asep"],
+        [
+          "Alright it is the time to say hello to Meowton, he has been waiting for a long time, I really missed him",
+          "Baiklah saatnya untuk menyapa Meowton, dia telah menunggu lama, dan saya telah kangen dengannya"
+        ]
+      ]
+    },
+    {
+      "action": ["lsprite", "rsprite", "diname", "ditext"],
+      "data": [
+        "asepCurious.png",
+        "MeowtonGlitch.png",
+        ["Asep", "Asep"],
+        [
+          "Meowton... Hello... Hey... Meowton... Why are you stil not responding?",
+          "Meowton... Halo... Hei... Meowton... Mengapa kamu masih tidak bisa merespon?"
+        ]
+      ]
+    },
+
+    {
+      "action": ["bg", "sfx"],
+      "data": ["tbc.jpg", "ending.mp3"]
+    },
+
+    {
+      "action": ["end"],
+      "data": ["end"]
+    }
+  ]
 ]

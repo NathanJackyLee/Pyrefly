@@ -1,20 +1,143 @@
 [
     {
         "battlenum": 0,
-        "question": "there is no battle 0",
-        "testcase": "bruh",
-        "expectout": "bruh"
+        "question": ["Print 'Hello Meowton' to communicate with Meowton","Cetak 'Hello Meowton' untuk berkomunikasi dengan Meowton"],
+        "testcase": [""],
+        "expectout": ["Hello Meowton"],
+        "hint":["you can use print() to print a message","kamu bisa gunakan print() untuk mencetak sebuah pesan"]
     },
     {
         "battlenum": 1,
-        "question": ["question 1 english","pertanyaan 1 indo"],
-        "testcase": ["hello world","test","b"],
-        "expectout": ["hello world","test","b"]
+        "question": ["The sum of 1273843 and 1000000","penjumlahan dari 1273843 dan 1000000"],
+        "testcase": [""],
+        "expectout": ["2273843"],
+        "hint":["Use '+' to sum the integers","gunakan '+' untuk menjumlahkan angka"]
     },
     {
         "battlenum": 2,
-        "question": ["question 2 english","pertanyaan 2 indo"],
-        "testcase": ["1 1","2 2","3 3"],
-        "expectout": ["2","4","6"]
+        "question": ["Write a program that takes a string as input and prints it back to the screen.","Tuliskan program yang menerima input berupa string dan mencetaknya kembali ke layar."],
+        "testcase": ["Hello World","bebek"],
+        "expectout": ["Hello World","bebek"],
+        "hint": ["You can use the input() function to receive input from the user and the print() function to display the output on the screen.","Anda dapat menggunakan fungsi input() untuk menerima input dari pengguna dan fungsi print() untuk menampilkan output ke layar."]
+    },
+    {
+        "battlenum": 3,
+        "question": ["Write a program that takes 5 integers as input and stores them in an array. Then, output the value of the 4th integer in the array.","Tuliskan program yang menerima 5 bilangan bulat sebagai input dan menyimpannya dalam sebuah array. Kemudian, keluarkan nilai bilangan bulat ke-4 dalam array tersebut."],
+        "testcase": ["3 8 5 2 9", "1 2 3 4 5"],
+        "expectout": ["2", "4"],
+        "hint":["You can use the input() function to receive the input from the user. Split the input string using the split() function to separate the integers and store them in an array. Access the 4th element of the array using its index and print it to the screen.","Anda dapat menggunakan fungsi input() untuk menerima input dari pengguna. Gunakan fungsi split() untuk memisahkan bilangan bulat dalam string input dan simpan dalam array. Akses elemen ke-4 array menggunakan indeksnya dan cetak ke layar."]
+    },
+    {
+        "battlenum": 4,
+        "question": ["Write a program that calculates the sum of three given integers.","Hitung Jumlah dari Tiga Bilangan Bulat"],
+        "testcase": ["1 2 3", "5 8 3"],
+        "expectout": ["6", "16"],
+        "hint":["To solve this challenge, you can use the input() function to receive the three integers from the user. Split the input string using the split() function to separate the integers. Convert the strings to integers using the int() function and add them together to get the sum. Finally, print the sum to the screen.","Untuk menyelesaikan tantangan ini, Anda dapat menggunakan fungsi input() untuk menerima tiga bilangan bulat dari pengguna. Gunakan fungsi split() untuk memisahkan bilangan bulat dalam string input. Konversikan string menjadi bilangan bulat menggunakan fungsi int() dan tambahkan ketiganya untuk mendapatkan jumlahnya. Terakhir, cetak jumlahnya ke layar."]
+    },
+    {
+        "battlenum": 5,
+        "question": ["Write a program that takes a string as input and reverses the order of the characters in the string.","Tuliskan program yang mengambil sebuah string sebagai input dan membalikkan urutan karakter-karakter dalam string tersebut"],
+        "testcase": ["Hello World", "bebek"],
+        "expectout": ["dlroW olleH", "kebeb"],
+        "hint":["you can learn more because string indexing in python arr['starting index':'end index':interval index], and -1 in array index means reverse","kamu dapat mempelajari bagaimana format array bekerja di python arr['mulai index':'akhir index':jarak index], index -1 berarti urutan terbalik"]
+    },
+    {
+        "battlenum": 6,
+        "question": ["Write a program that takes an integer as input and determines whether it is an even or odd number. If the number is even, output \"even\". If the number is odd, output \"odd\".","Tuliskan program yang menerima input berupa bilangan bulat dan menentukan apakah bilangan tersebut genap atau ganjil. Jika bilangan tersebut genap, tampilkan \"even\". Jika bilangan tersebut ganjil, tampilkan \"odd\"."],
+        "testcase": ["12", "27"],
+        "expectout": ["even", "odd"],
+        "hint":["To solve this challenge, you can use the input() function to receive an integer input from the user. Use the modulo operator (%) to check if the number is divisible by 2. If the result is 0, then the number is even. Otherwise, it is odd. Print the corresponding output based on the check.","Untuk menyelesaikan tantangan ini, Anda dapat menggunakan fungsi input() untuk menerima input berupa bilangan bulat dari pengguna. Gunakan operator modulo (%) untuk memeriksa apakah bilangan tersebut dapat dibagi dengan 2. Jika hasilnya adalah 0, maka bilangan tersebut genap. Jika tidak, maka bilangan tersebut ganjil. Cetak output yang sesuai berdasarkan hasil pemeriksaan."]
+    },
+    {
+        "battlenum": 7,
+        "question": ["Write a program that check whether a string contain 'Py' virus or not, if yes output 1, else output -1","Buatlah sebuah program yang mengecek apakah sebuah string memiliki Py didalamnya atau tidak, jika ada maka output 1, jika tidak -1"],
+        "testcase": ["BebekPy", "Covid19"], 
+        "expectout": ["1", "-1"],
+        "hint":["To solve this challenge, you can utilize the string methods available in the Python programming language. Explore the functionalities provided by the string methods and choose an appropriate method to check for the presence of the 'Py' virus in the given string. Use conditional statements to handle the cases where the virus is found or not found.", "Untuk menyelesaikan tantangan ini, kamu dapat memanfaatkan metode-metode string yang tersedia dalam bahasa pemrograman Python. Jelajahi fungsionalitas yang disediakan oleh metode-metode string dan pilih metode yang tepat untuk memeriksa keberadaan virus 'Py' dalam string yang diberikan. Gunakan pernyataan kondisional untuk menangani kasus di mana virus ditemukan atau tidak ditemukan."]
+    },
+    {
+        "battlenum": 8,
+        "question": ["Write a program that takes a string of words as input and searches for the word \"Oracle\" within it. If the word is found, output the position or index of the first occurrence of \"Oracle\" in the string. If the word is not found, output -1","Tuliskan program yang menerima input berupa string yang terdiri dari beberapa kata dan mencari kata \"Oracle\" di dalamnya. Jika kata tersebut ditemukan, tampilkan posisi atau indeks dari kemunculan pertama \"Oracle\" dalam string tersebut. Jika kata tersebut tidak ditemukan, tampilkan -1"],
+        "testcase": ["The Oracle is a powerful database system", "I am atomic"],
+        "expectout": ["4", "-1"],
+        "hint":["To solve this challenge, you can use the input() function to receive a string input from the user. Split the string into individual words using the split() method. Iterate through the words and compare each word with \"Oracle\" using the if statement. If a match is found, print the position (index + 1) of the word. If no match is found, print a message stating that \"Oracle\" is not present in the string.","Untuk menyelesaikan tantangan ini, Anda dapat menggunakan fungsi input() untuk menerima input berupa string dari pengguna. Pisahkan string menjadi kata-kata individu menggunakan metode split(). Lakukan iterasi melalui kata-kata dan bandingkan setiap kata dengan \"Oracle\" menggunakan pernyataan if. Jika ditemukan kecocokan, cetak posisi (indeks + 1) kata tersebut. Jika tidak ditemukan kecocokan, cetak pesan yang menyatakan bahwa \"Oracle\" tidak ada dalam string tersebut."]
+    },
+    {
+        "battlenum": 9,
+        "question": ["Write a program that prints the word \"Stop!\" ten times using a for loop. Each occurrence of \"Stop!\" should be printed on same line separated by space.","Tuliskan program yang mencetak kata \"Stop!\" sebanyak sepuluh kali menggunakan perulangan for. Setiap kemunculan \"Stop!\" harus dicetak pada baris yang sama dengan jarak spasi."],
+        "testcase": [""],
+        "expectout": ["Stop! Stop! Stop! Stop! Stop! Stop! Stop! Stop! Stop! Stop!"],
+        "hint":["To solve this challenge, you can use a for loop that iterates from 1 to 10. Inside the loop, concatenate the word \"Stop!\" with a space and store it in a variable. After the loop, print the variable containing the concatenated string. You could use formatted output too","Untuk menyelesaikan tantangan ini, Anda dapat menggunakan perulangan for yang berulang dari 1 hingga 10. Di dalam perulangan, gabungkan kata \"Stop!\" dengan spasi dan simpan dalam sebuah variabel. Setelah perulangan, cetak variabel yang berisi string yang telah digabungkan. Kamu dapat menggunakan output yang diformat juga"]
+    },
+    {
+        "battlenum": 10,
+        "question": ["Given an integer, Write a program that loop through this process (add 1 in every loop, then multiply the total by the current loop number","diberikan sebuah integer, buatlah program yang dapat loop dengan proses (tambah 1 di setiap loop, kemudian hasilnya dikalikan dengan total loop saat itu"],
+        "testcase": ["5","3"],
+        "expectout": ["38899","28819"],
+        "hint":["Use for loop, and assignment operator","gunakan perulangan for dan operator assignment"]
+    },
+    {
+        "battlenum": 11,
+        "question": ["Write a program that takes a string as input and replaces each letter with its corresponding ASCII code. This will create a hidden code from the original string.","Tuliskan program yang mengambil sebuah string sebagai input dan menggantikan setiap huruf dengan kode ASCII yang sesuai. Hal ini akan menciptakan sebuah kode tersembunyi dari string asli."],
+        "testcase": ["Hello, world!"],
+        "expectout": ["72 101 108 108 111 44 32 119 111 114 108 100 33"],
+        "hint":["To solve this challenge, you can use a loop to iterate through each character of the string. Check if the character is a letter using a conditional statement. If it is a letter, convert it to its ASCII code using the ord() function and append the code to a new string. If it is not a letter, simply append the character as it is. Finally, print the new string with the replaced ASCII codes.","Untuk menyelesaikan tantangan ini, Anda dapat menggunakan perulangan untuk melintasi setiap karakter dari string. Periksa apakah karakter tersebut adalah huruf menggunakan pernyataan kondisional. Jika itu adalah huruf, konversikan ke kode ASCII menggunakan fungsi ord() dan tambahkan kode ke dalam sebuah string baru. Jika bukan huruf, tambahkan karakter tersebut apa adanya. Akhirnya, cetak string baru dengan kode ASCII yang digantikan."]
+    },
+    {
+        "battlenum": 12,
+        "question": ["Write a program that stores 10 integers in an array and then outputs the sum of the elements at the 2nd and 5th indices.","Tuliskan program yang menyimpan 10 bilangan bulat dalam sebuah array dan kemudian menghasilkan jumlah dari elemen-elemen pada indeks ke-2 dan ke-5."],
+        "testcase": ["1 2 3 4 5 6 7 8 9 10", "2 4 6 8 10 12 14 16 18 20"],
+        "expectout": ["7","14"],
+        "hint":["To solve this challenge, you can create an array of 10 integers and assign the values accordingly. Use array indexing to access the elements at the 2nd and 5th indices and calculate their sum. Finally, print the sum.","Untuk menyelesaikan tantangan ini, Anda dapat membuat sebuah array dengan 10 bilangan bulat dan mengisinya dengan nilai-nilai yang sesuai. Gunakan indeks array untuk mengakses elemen-elemen pada indeks ke-2 dan ke-5, kemudian hitung jumlahnya. Akhirnya, cetak hasil jumlah tersebut."]
+    },
+    {
+        "battlenum": 13,
+        "question": ["Given an integer n, loop starting from 0 to n, and print 'attack' if the number is the multply of 4, print 'block' if the number is multiply of 3, and print 'skill' when the number is multiply of 3 and 4, else just print the n value",
+        "Diberikan sebuah integer n, looplah mulai dari 0 sampai n, print 'attack' jika nilai n adalah kelipatan dari 4, print 'block' jika kelipatan dari 3, print 'skill' jika kelipatan 4 dan 3, selain itu print nilai n"],
+        "testcase": ["5","12"],
+        "expectout": ["1 2 block attack 5", "1 2 block attack 5 block 7 attack block 10 11 skill"],
+        "hint":["You can solve this using if conditional, be careful regarding the order","kamu dapat menggunakan kondisional if, hati hati dengan pengurutan kondisinya"]
+    },
+    {
+        "battlenum": 14,
+        "question": ["There are 2 type of database, given 2 string name, output the name of the database with the least ASCII sum value","Terdapat 2 buah nama database, jika diberikan 2 string nama database tersebut, output nama database dengan jumlah ASCII yang paling sedikit"],
+        "testcase": ["Hello.py bebek.py"],
+        "expectout": ["bebek.py"],
+        "hint":["use a for loop to sum all of the ascii and then compare it","gunakan for loop untuk menjumlahkan asciinya dan bandingan"]
+    },
+    {
+        "battlenum": 15,
+        "question": ["given 5 unordered integers, sort it by the value, ascending","diberikan 5 buah integer, urutkan integer tersebut berdasarkan nilainya"],
+        "testcase": ["5 3 4 2 1", "2 4 5 7 6"],
+        "expectout": ["1 2 3 4 5", "2 4 5 6 7"],
+        "hint":["you can put the number in the array and sort it using sort()","kamu bisa menaruh angka di dalam array dan mengurutkannya dengan menggunakan sort()"]
+    },
+    {
+        "battlenum": 16,
+        "question": ["given a string of characters, sort it ascending, and print every character before 'S' character ","diberikan sebuah karakter string, urutkan secara ascending dan cetak semua karakter sebelum 'S'"],
+        "testcase": ["SHELLO", "JERUKS"],
+        "expectout": ["EHLLO", "EJKR"],
+        "hint":["use sort(), and if condition to stop printing when found S","gunakan sort() dan kondisi if untuk berhenti ketika bertemu dengan S"]
+    },
+    {
+        "battlenum": 17,
+        "question": ["given an integer n, output the fibonnaci sequence in n terms ","diberikan sebuah integer n, outputlah urutan fibonnaci sebanyak n kali"],
+        "testcase": ["7","4"],
+        "expectout": ["0 1 1 2 3 5 8", "0 1 1 2"],
+        "hint":["You can look for Fibonnaci sequence in google to know more about the algorithm behind it, you can solve it using either looping or recursion","Kamu dapat mencari sekuens fibonnaci di google untuk mengetahui lebih lanjut algorithmanya, kamu dapat menyelesaikannya menggunakan looping atau rekursi"]
+    },
+    {
+        "battlenum": 18,
+        "question": ["given a set of ASCII value, output it in the form of a string","diberikan nilai nilai ASCII, output lah nilai tersebut dalam bentuk string"],
+        "testcase": ["72 101 108 108 111 44 32 119 111 114 108 100 33"],
+        "expectout": ["Hello, world!"],
+        "hint":["you can use chr() function to convert ASCII value to its corresponding character","kamu bisa menggunakan chr() untuk mengubah nilai ASCII menjadi character"]
+    },
+    {
+        "battlenum": 19,
+        "question": ["Print 'Hello Meowton' to communicate with Meowton","Cetak 'Hello Meowton' untuk berkomunikasi dengan Meowton"],
+        "testcase": [""],
+        "expectout": ["Hello Meowton"],
+        "hint":["you can use print() to print a message","kamu bisa gunakan print() untuk mencetak sebuah pesan"]
     }
 ]
