@@ -10,18 +10,19 @@ div{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 1270px;
-    height: 765px; */
-    width: 100%;
-    height: 100%;
+    width: 1270px;
+    height: 765px;
     border: #2B0B3A;
     background-color: gainsboro; 
     border-color: #2B0B3A;
     border-width: 10px;
-    
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(5,1fr);
+    place-items: center;
     background: url(assets/IDETestimage.jpg);
     background-size: cover;
-    /* filter: brightness(1.2);  */
+
 }
 
 /* p,h3 {
@@ -84,14 +85,26 @@ img{
 
 .OutputBox{
     position: absolute;
-    top: 80px;
-    right: 170px;
-    background-color: white;
+    top: 120px;
+    
+    right: 150px;
+    /* background-color: white; */
     width: 310px;
     height: 200px;
 
     
 }
+
+.OutputTexts{
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    /* background-color: white; */
+    width: 310px;
+    height: 200px;
+}
+
+
 
 .Questions{
     position: absolute;
@@ -105,7 +118,11 @@ img{
 .Feedback{
     position: absolute;
     right: 150px;
+    top: 1rem;
+    grid-column: 1;
+    grid-row: 1;
     z-index: -1;
+    display: grid;
     /* width: 390px; */
 }
 
@@ -126,12 +143,37 @@ img{
 
 .questionbox{
     position: absolute;
+    display: grid;
     left: 20px;
+    top: 30px;
+    grid-row: 1;
+    grid-column: 1;
 }
 
-.ContinueEP{
+.ContinueEp{
     position: absolute;
+    color: black;
+    bottom: 120px;
+    right: 35%;
     background-color: white;
-    bottom: 5%;
-    right: 5%;
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+
+}
+
+@media (max-width:1272px) {
+    .IDE{
+        width: 90%;
+        height: 60%;
+    }
+    
+    .EditorBox{
+        height: 35vh;
+        width: 50%;
+    }
+
+    
+
+
 }
