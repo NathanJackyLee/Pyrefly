@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useRef } from "react";
 import Editor from '@monaco-editor/react';
 import battledata from "./data/battledata.json";
 import axios from "axios";
+import "./IDE.css";
+import imagetest from "./assets/meowtonFix.png";
+import imagefeedback from "./assets/TextBoxIDE.png";
+
 
 function IDE(props){
     const question = battledata[props.battle]["question"][props.lang];
+    const hint = battledata[props.battle]["hint"][props.lang];
     const testcase = battledata[props.battle]["testcase"];
     const expectout = battledata[props.battle]["expectout"];
     const [testing, setTesting] = React.useState(true);
     const [value, setValue] = React.useState("");
     const [input, setInput] = React.useState("");
-    const [output, setOutput] = React.useState("");
+    const [output, setOutput] = React.useState(<div className="OutputBox"></div>);
+
+    const win = useRef(false);
 
     const handleEditorChange = (value) => {setValue(value);}
-    const toggleTesting = () => setTesting((prev) => !prev);
+    const toggleTesting = () => {
+        
+        setTesting((prev) => !prev);
+    }
+
+    const showHint = () =>{
+        setOutput(
+            <div className="OutputBox">
+                <p>{hint}</p>
+            </div>
+        )
+    }
     
     const checkTestRun = async (token) =>{
         const options = {
@@ -38,7 +56,7 @@ function IDE(props){
                 }, 2000)
                 return
             }else{
-                setOutput(response.data.stdout);
+                setOutput(<div className="OutputBox"><p>{response.data.stdout}</p></div>);
                 console.log("got a code verdict!" + statusId);
                 return
             }
@@ -106,6 +124,25 @@ function IDE(props){
             }else{
                 for(let i=0;i<response.data.submissions.length;i++) console.log(response.data.submissions[i].status?.description);
                 // console.log("got a code verdict!" + statusId);
+                let verdict = "You did it!"
+                let obstacle = -1;
+                for(let i=0;i<response.data.submissions.length;i++) if(response.data.submissions[i].status?.id !== 3){
+                    verdict = response.data.submissions[i].status?.description;
+                    obstacle = i;
+                    break;
+                }
+                if(obstacle === -1){
+                    win.current = true;
+                    setOutput(<div className="OutputBox"><p>{verdict}</p></div>);
+                }
+                else setOutput(
+                    <div className="OutputBox">
+                        <p>{verdict}</p>
+                        <p>Failed Case: {testcase[obstacle]}</p>
+                        <p>Your Answer: {response.data.submissions[obstacle].stdout}</p>
+                        <p>Answer was supposed to be: {expectout[obstacle]}</p>
+                    </div>
+                )
                 return
             }
         }catch (err){
@@ -153,10 +190,14 @@ function IDE(props){
 
     if(testing) return(
         <div className="IDE">
-            <h1>This is the IDE with battle number {props.battle}</h1> <br/>
-            <button onClick={toggleTesting}>testing mode: on</button> <br/>
-            <p>{question}</p>
-            <Editor
+            <button className="ChangeMode" onClick={toggleTesting}>testing mode: on</button> <br/>
+
+            <div className="questionbox">
+                <p style={{ color: "white"}}>{question}</p>
+            </div>
+
+            <div className="EditorBox">
+                <Editor
                 height="85vh"
                 width={`100%`}
                 language="python"
@@ -165,13 +206,25 @@ function IDE(props){
                 defaultValue="// write your code here"
                 onChange={handleEditorChange}
             />
-            <br/>
-            <div className="OutputBox">
-                <h5>Output boxe</h5>
-                <p>{output}</p>
+            <br/>    
             </div>
-            <div className="UserInputBox">
-                <h3>Custom input boxe</h3>
+
+
+
+            <div className="OutputTexts">
+                {output}    
+            </div>
+
+
+            <div className="Feedback">
+            <img src={imagefeedback}></img>
+            </div>
+
+
+            
+
+            {/* <div className="UserInputBox">
+                <h3 style={{ color: "white"}}>Custom input box:</h3>
                 <textarea
                     className = "input-box"
                     rows = "5"
@@ -179,21 +232,36 @@ function IDE(props){
                     onChange = {(e) => setInput(e.target.value)}
                 >
                 </textarea>
+
+
+            </div> */}
+            <div className="TestSiteChars">
+                <img src={imagetest}></img>
             </div>
-            <button onClick={handleTestRun}>Test Run!</button>
-            <button onClick={props.endBattle}>end battle</button>
+            <button className='CompileButton' onClick={handleTestRun}>Test Run!</button>
+            <button className='ShowHint' onClick={showHint}>show hint</button>
+            {/* <button onClick={props.endBattle}>end battle</button> */}
         </div>
+        
     );
     else return(
         <div className="IDE">
-            <h1>This is the IDE with battle number {props.battle}</h1> <br/>
-            <button onClick={toggleTesting}>testing mode: off</button> <br/>
-            <p>{question}</p>
+            {/* <h1>This is the IDE with battle number {props.battle}</h1> <br/> */}
+            
+            <button className="ChangeModeYes" onClick={toggleTesting}>testing mode: off</button> <br/>
+            <div className="questionbox">
+                <p style={{ color: "white"}}>{question}</p>
+            </div>
+            
             <br/>
-            <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
-            <br/>
-            <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p>
-            <Editor
+            {/* <div className="Questions">
+                <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
+                <br/>
+                <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p>
+            </div> */}
+
+            <div className="EditorBox">
+                <Editor
                 height="85vh"
                 width={`100%`}
                 language="python"
@@ -201,18 +269,25 @@ function IDE(props){
                 theme="vs-light"
                 defaultValue="// write your code here"
                 onChange={handleEditorChange}
-            />
-            <br/>
-            {/* <div className="OutputBox">
-                <h5>Output boxe</h5>
-                <p>{output}</p>
+                />
+                <br/>
             </div>
-            <div className="UserInputBox">
-                <h3>Custom input boxe</h3>
-                <textarea onChange={() => setInput(input)}>{input}</textarea>
-            </div> */}
-            <button onClick={handleJudge}>Judge!</button>
-            <button onClick={props.endBattle}>end battle</button>
+            <br/>
+       
+            <div className="Feedback">
+                <img src={imagefeedback}></img>
+            </div>
+
+            <div className="OutputTexts">
+                {output}    
+            </div>
+
+            <div className="TestSiteChars">
+                <img src={imagetest}></img>
+            </div>
+            <button className="ContinueEp" onClick={props.endBattle}>Skip!</button>
+            <button className="CompileButton" onClick={handleJudge}>Judge!</button>
+            {win.current ? <button className ="ContinueEp" onClick={props.endBattle}>end battle</button>: <></>}
         </div>
     )
 }

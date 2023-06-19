@@ -1,0 +1,217 @@
+div{
+    overflow: hidden;
+}
+
+
+
+.IDE{
+    overflow-x: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 1270px;
+    height: 765px; */
+    width: 100%;
+    height: 100%;
+    border: #2B0B3A;
+    background-color: gainsboro; 
+    border-color: #2B0B3A;
+    border-width: 10px;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(5,1fr);
+    place-items: center;
+    background: url(assets/IDETestimage.jpg);
+    background-size: cover;
+
+}
+
+/* p,h3 {
+    color: red;
+} */
+
+.IDELaptop{
+    position: absolute;
+    
+}
+
+.EditorBox {
+    height: 45vh;
+    width: 50vw;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    display: grid;
+    grid-row: 2;
+}
+
+.UserInputBox{
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    left: 20px;
+    bottom: 95px;
+
+}
+
+textarea {
+    width: 350px;
+    height: 400px;
+    
+}
+
+.ShowHint {
+    /* position: absolute; */
+    background-color: green;
+     
+}
+
+.ShowHint {
+    width: 10vw;
+    height: 100px;
+    /* right: 620px;  */
+    /* bottom: 120px; */
+    display: grid;
+    grid-row:5;
+    grid-column: 2;
+    align-items: center;
+    border-radius: 25px;
+    position: relative;
+    bottom: 5vh;
+}
+
+.CompileButton {
+    /* position: absolute; */
+    background-color: white;
+    width: 10vw;
+    height: 100px;
+    display: grid;
+    grid-row: 5;
+    grid-column: 1;
+    bottom: 5vh;
+    align-items: center;
+    border-radius: 25px;
+    position: relative;
+    /* bottom: 50px; */
+}
+
+.TestSiteChars {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    margin: auto;
+    z-index: 0;
+}
+
+img{
+    height: 380px;
+}
+
+.OutputBox{
+    position: absolute;
+    display: grid;
+    grid-column: 4;
+    grid-row: 2;
+    width: 310px;
+    height: 250px;
+}
+
+.OutputTexts{
+    position: absolute;
+    top: 220px;
+    right: 165px;
+    width: 310px;
+    height: 213px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.Questions{
+    position: absolute;
+    bottom: 120px;
+    left: 20px;
+    background-color: white;
+    width: 350px;
+    height: 100px;
+}
+
+.Feedback{
+    position: absolute;
+    right: 150px;
+    top: 1rem;
+    grid-column: 1;
+    grid-row: 2;
+    z-index: -1;
+    display: grid;
+    /* width: 390px; */
+}
+
+.ChangeMode{
+    color: green;
+    position: relative;
+    /* left:20px; */
+    top: -19px;
+    align-items: center;
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+}
+
+.ChangeModeYes{
+    color: red;
+    position: relative;
+    /* left:20px; */
+    top: -19px;
+    align-items: center;
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+}
+
+.questionbox{
+    position: absolute;
+    display: grid;
+    left: 20px;
+    top: 134px;
+    grid-row: 1;
+    grid-column: 1;
+    width: 50%;
+   
+}
+
+p{
+    word-break: normal;
+    white-space: normal;
+}
+
+.ContinueEp{
+    position: relative;
+    color: black;
+    /* bottom: 120px; */
+    /* right: 35%; */
+    display: grid;
+    grid-row: 5;
+    grid-column: 2;
+    align-items: center;
+    bottom: 5vh;
+
+    background-color: white;
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+
+}
+

@@ -2,34 +2,20 @@ import React from "react";
 import {useRef} from "react";
 import StageSelect from "./StageSelect";
 import IDE from "./IDE";
-import testimg from "./assets/testimg.jpg";
 import story from "./data/story.json"
+import './Game.css';
+import ResolveBackground from "./ResolveBackground";
 
 function Game(props){
     const [chapter, setChapter] = React.useState(0);
     const [idx, setIdx] = React.useState(0);
 
     const advance = () =>{
-        // console.log("idx is now " + idx);
         if(story[chapter][idx]["action"][0] === "end") setIdx(0);
         else setIdx(old => old + 1);
     }
-    // const [inBattle, setInBattle] = React.useState(false);
-    // function enterBattle(){
-    //     if(inBattle == false) setInBattle(true);
-    //     console.log("enterBattle");
-    //     console.log(inBattle);
-    // }
-    // function exitBattle(){
-    //     if(inBattle == true) setInBattle(false);
-    //     console.log("exitBattle");
-    //     console.log(inBattle);
-    // }
 
-    // const leg = story[chapter].length;
-    // console.log("story[chapter] leg: " + story[chapter].length);
     const bg = useRef("");
-    // const bgm = useRef("");
     const diname = useRef("");
     const ditext = useRef("");
     const lsprite = useRef("");
@@ -46,7 +32,6 @@ function Game(props){
     const endChapter = () =>{
         console.log("end chapter");
         bg.current = "";
-        // bgm.current = "";
         lsprite.current = "";
         rsprite.current = "";
         diname.current = "";
@@ -60,21 +45,21 @@ function Game(props){
     else{
         let leg = story[chapter][idx]["action"].length;
         let i = 0; for(i=0;i<leg;i++){
-            if(story[chapter][idx]["action"][i] === "go"){
-                advance();
-            }else if(story[chapter][idx]["action"][i] === "bg"){
-                bg.current = "bg-[url('./assets/" + story[chapter][idx]["data"][i] + "')]";
+            if(story[chapter][idx]["action"][i] === "bg"){
+                // const a = require(`./assets/${story[chapter][idx]["data"][i]}`);
+                bg.current = ResolveBackground(story[chapter][idx]["data"][i]);
             }else if(story[chapter][idx]["action"][i] === "bgm"){
-                console.log("story bgm " + story[chapter][idx]["data"][i]);
                 props.setbgm(story[chapter][idx]["data"][i]);
-            }
-            else if(story[chapter][idx]["action"][i] === "lsprite") lsprite.current = story[chapter][idx]["data"][i];
-            else if(story[chapter][idx]["action"][i] === "rsprite") rsprite.current = story[chapter][idx]["data"][i];
-            else if(story[chapter][idx]["action"][i] === "diname") diname.current = story[chapter][idx]["data"][i][props.lang];
+            }else if(story[chapter][idx]["action"][i] == "sfx"){
+                props.playsfx(story[chapter][idx]["data"][i]);
+            }else if(story[chapter][idx]["action"][i] === "lsprite"){
+                lsprite.current = require(`./assets/${story[chapter][idx]["data"][i]}`);
+            }else if(story[chapter][idx]["action"][i] === "rsprite"){
+                rsprite.current = require(`./assets/${story[chapter][idx]["data"][i]}`);
+            }else if(story[chapter][idx]["action"][i] === "diname") diname.current = story[chapter][idx]["data"][i][props.lang];
             else if(story[chapter][idx]["action"][i] === "ditext") ditext.current = story[chapter][idx]["data"][i][props.lang];
             else if(story[chapter][idx]["action"][i] === "battle"){
                 battle_number = story[chapter][idx]["data"][i];
-                // enterBattle();
             }
             else if(story[chapter][idx]["action"][i] === "end"){
                 endChapter();
@@ -85,19 +70,48 @@ function Game(props){
             <IDE lang={props.lang} battle={battle_number} endBattle={endBattle}/>
         );
         else return(
-            <div className={bg.current}>
-                <h1>This is a VN Page in chapter {chapter}</h1>
-                <p>background: {bg.current}</p> <br/>
-                {/* <p>music: {bgm.current}</p> <br/> */}
-                <p>lsprite: {lsprite.current}</p> <br/>
-                <p>rsprite: {rsprite.current}</p> <br/>
-                <p>diname: {diname.current}</p> <br/>
-                <p>ditext: {ditext.current}</p> <br/>
-                {/* <img src={testimg}></img> */}
-                <button onClick={() => advance()}>try advancing page</button>
-                {/* <button onClick={() => setInBattle(true)}>try entering battle</button> */}
-                <button onClick={() => endChapter()}>try reaching end of chapter</button>
+            <div className="GameMainContainer">
+                        <div className={bg.current}>
+                    <div className="LeftSprite">
+                        {/* Position for LeftSprite */}
+                        <img src={lsprite.current} alt="didnt work"></img>
+                        {/* <p>{lsprite.current}</p> <br/> */}
+                    </div>
+                        
+                    <div className="RightSprite">
+                        {/* Position For Right Sprite */}
+                        <img src={rsprite.current} alt={rsprite.current}></img>
+                        {/* <p>{rsprite.current}</p> <br/> */}
+                    </div>
+                    
+                    <div className="TextBoxContainer">
+                        <div className="NameBox">
+                            <p className="Speaking"> {diname.current}</p> <br/>
+                        </div>
+                        <div className="TextBoxRectangle">
+                            <div className="Textss">
+                                <p> {ditext.current}</p> <br/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="AdvanceandEnd">
+                        <div className="Advance">
+                            <button onClick={() => advance()}>Next Page</button>
+                        </div>
+                        
+                        {/* <button onClick={() => setInBattle(true)}>try entering battle</button> */}
+
+                        <div className="End">
+                            <button onClick={() => endChapter()}>Quit Chapter</button>
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
             </div>
+        
         );
     }
 }
