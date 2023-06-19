@@ -21,10 +21,8 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 1270px;
-    height: 765px; */
-    width: 100%;
-    height: 100%;
+    width: 1270px;
+    height: 765px;
     border: #2B0B3A;
     background-color: gainsboro; 
     border-color: #2B0B3A;
@@ -33,7 +31,7 @@ html{
 
 .LeftSprite {
     position: absolute;
-	bottom: 0;
+	bottom: 150px;
 	left: 63px;
 	margin: auto;
 
@@ -42,7 +40,7 @@ html{
 
 .RightSprite {
     position: absolute;
-    bottom: 0;
+    bottom: 90px;
     right: 63px;
     margin: auto;
 }
@@ -57,8 +55,8 @@ img {
     position: absolute;
     bottom: 0;
     height: 220px;
-    width: 1280px;
-    background: rgba(89, 84, 84, 0.5);
+    width: 1280px;  
+    background: rgba(89, 84, 84, 1);
 }
 
 .NameBox {
@@ -69,11 +67,13 @@ img {
     bottom: 160px;
     background: #D2D2D2;
     border-radius: 10px 10px 0px 0px;
+    justify-content: center;
 }
 
 .TextBoxRectangle {
     position: absolute;
     width: 1200px;
+    /* width: 100vh; */
     height: 143px;
     left: 19px;
     top: 40px;
@@ -86,6 +86,7 @@ img {
     position: absolute;
     top: 10px;
     left: 30px;
+    font-size: 25px;
 }
 
 .Advance {
@@ -112,6 +113,40 @@ img {
 
 
 .bg.current {
-    z-index: 0;
+    filter: brightness(0.7);
     position: absolute;
+}
+
+.Speaking{
+    position: absolute;
+    left: 60px;
+    
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 20px;
+}
+
+.background{
+    background: url(./assets/Artificial_Park.jpg); 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+}
+
+@media (max-width: 1272px){
+    .GameMainContainer{
+        height: 60%;
+        width: 90%;
+    }
+
+    .TextBoxContainer{
+        width: 100vh;
+    }
+
+    .TextBoxRectangle{
+        width: 90vh;
+    }
 }
