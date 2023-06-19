@@ -2,8 +2,8 @@
   [],
   [
     {
-      "action": ["bg","bgm"],
-      "data": ["MC_Bedroom.jpg", "perception.mp3"]
+      "action": ["bg","bgm","lsprite","rsprite"],
+      "data": ["MC_Bedroom.jpg", "perception.mp3","blank.png","blank.png"]
     },
     {
       "action": ["ditext"],
@@ -674,8 +674,8 @@
   ],
   [
     {
-      "action": ["bg","bgm"],
-      "data": ["Secret_Base.jpg","perception.mp3"]
+      "action": ["bg","bgm","lsprite","rsprite"],
+      "data": ["Secret_Base.jpg","perception.mp3","blank.png","blank.png"]
     },
     {
       "action": ["ditext"],
@@ -928,8 +928,8 @@
   ],
   [
     {
-      "action": ["bg","bgm"],
-      "data": ["Virtual_Lab_Night.jpg","dreams.mp3"]
+      "action": ["bg","bgm","lsprite","rsprite"],
+      "data": ["Virtual_Lab_Night.jpg","dreams.mp3","blank.png","blank.png"]
     },
     {
       "action": ["ditext"],
@@ -1256,8 +1256,8 @@
   ],
   [
     {
-      "action": ["bg","bgm"],
-      "data": ["Underground_facility3.jpg","perception.mp3"]
+      "action": ["bg","bgm","lsprite","rsprite"],
+      "data": ["Underground_facility3.jpg","perception.mp3","blank.png","blank.png"]
     },
     {
       "action": ["ditext"],
@@ -1544,8 +1544,8 @@
   ],
   [
     {
-      "action": ["bg","bgm"],
-      "data": ["Virtual_Headquarters.jpg","dreams.mp3"]
+      "action": ["bg","bgm","lsprite","rsprite"],
+      "data": ["Virtual_Headquarters.jpg","dreams.mp3","blank.png","blank.png"]
     },
     {
       "action": ["ditext"],
