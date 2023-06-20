@@ -190,7 +190,7 @@ function IDE(props){
 
     if(testing) return(
         <div className="IDE">
-            <button className="ChangeMode" onClick={toggleTesting}>testing mode: on</button> <br/>
+            <button className="ChangeMode" onClick={toggleTesting}>testing mode: on</button>
 
             <div className="questionbox">
                 <p style={{ color: "white"}}>{question}</p>
@@ -209,21 +209,15 @@ function IDE(props){
             <br/>    
             </div>
 
-
-
             <div className="OutputTexts">
                 {output}    
             </div>
-
 
             <div className="Feedback">
             <img src={imagefeedback}></img>
             </div>
 
-
-            
-
-            {/* <div className="UserInputBox">
+            <div className="UserInputBox">
                 <h3 style={{ color: "white"}}>Custom input box:</h3>
                 <textarea
                     className = "input-box"
@@ -232,9 +226,8 @@ function IDE(props){
                     onChange = {(e) => setInput(e.target.value)}
                 >
                 </textarea>
+            </div>
 
-
-            </div> */}
             <div className="TestSiteChars">
                 <img src={imagetest}></img>
             </div>
@@ -248,17 +241,10 @@ function IDE(props){
         <div className="IDE">
             {/* <h1>This is the IDE with battle number {props.battle}</h1> <br/> */}
             
-            <button className="ChangeModeYes" onClick={toggleTesting}>testing mode: off</button> <br/>
+            <button className="ChangeModeYes" onClick={toggleTesting}>testing mode: off</button>
             <div className="questionbox">
                 <p style={{ color: "white"}}>{question}</p>
             </div>
-            
-            <br/>
-            {/* <div className="Questions">
-                <p>testcase input: {testcase[0]}{testcase[1]}{testcase[2]}</p>
-                <br/>
-                <p>expected output: {expectout[0]}{expectout[1]}{expectout[2]}</p>
-            </div> */}
 
             <div className="EditorBox">
                 <Editor
