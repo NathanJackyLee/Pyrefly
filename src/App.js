@@ -29,7 +29,7 @@ function App(props) {
       <Game setRoot={setRoot} lang={language} setbgm={props.setbgm} setbgmvol={props.setbgmvol} playsfx={props.playsfx} setsfxvol={props.setsfxvol}/>
   );
   else if(root === 2) return (
-      <Settings setRoot={setRoot} lang={language} toggleLanguage={toggleLanguage} setbgm={props.setbgm} setbgmvol={props.setbgmvol} bgmvol={props.bgmvol} playsfx={props.playsfx} setsfxvol={props.setsfxvol} sfxvol={props.getsfxvol}/>
+      <Settings setRoot={setRoot} lang={language} toggleLanguage={toggleLanguage} setbgm={props.setbgm} setbgmvol={props.setbgmvol} bgmvol={props.bgmvol} playsfx={props.playsfx} setsfxvol={props.setsfxvol} sfxvol={props.sfxvol}/>
   );
 }
 

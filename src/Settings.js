@@ -5,16 +5,10 @@ function Settings(props){
     let bg = "bg-[url('./assets/CyberPunkSettings.jpg')]"
     let screening = bg + " bg-cover w-full h-screen";
     console.log(props)
-    // let slide = 0.5;
-    // const handleSlide = (x) =>{
-    //     slide = x;
-    //     props.setvol(x);
-    // }
-    const [bgmSlide, setBgmSlide] = React.useState(1.0);
-    const [sfxSlide, setSfxSlide] = React.useState(1.0);
+    
+    const [bgmSlide, setBgmSlide] = React.useState(props.bgmvol);
+    const [sfxSlide, setSfxSlide] = React.useState(props.sfxvol);
     const handleBgmSlide = (x) =>{
-        // x is an event???
-        // console.log(x.target.value);
         props.setbgmvol(x.target.value);
         setBgmSlide(x.target.value);
     }
@@ -37,9 +31,9 @@ function Settings(props){
             
             <button className="LanguageButton" onClick={props.toggleLanguage}>{props.lang === 0 ? "Language: English" : "Bahasa: Indonesia"}</button> <br/>
             <button className = "BackMenu" onClick={() => props.setRoot(0)}>{props.lang === 0 ? "Back to Main Menu" : "Kembali ke Main Menu"}</button> <br/>
-            <button className="BGMOWL" onClick={() => props.setbgm("bgm_owl.mp3")}>set bgm owl</button> <br/>
-            <button className ="BGM1" onClick={() => props.setbgm("bgm1.mp3")}>set bgm1</button> <br/>
-            <button className="PlaySFX" onClick={() => props.playsfx("sfx.mp3")}>play sfx</button> <br />
+            {/* <button className="BGMOWL" onClick={() => props.setbgm("bgm_owl.mp3")}>set bgm owl</button> <br/> */}
+            <button className ="BGMOWL" onClick={() => props.setbgm("perception.mp3")}>test bgm volume</button> <br/>
+            <button className="PlaySFX" onClick={() => props.playsfx("friend-request-14878.mp3")}>test sfx volume</button> <br />
             
             
                 <input

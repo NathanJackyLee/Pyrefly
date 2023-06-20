@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Test from './test';
-// import reportWebVitals from './reportWebVitals';
 
 const bgm = new Audio()
 const sfx = new Audio()
@@ -15,17 +14,14 @@ const setbgm = (name) =>{
 }
 const setbgmvol = (vol) =>{bgm.volume = vol;}
 function getbgmvol(){return bgm.volume;}
-const bgmsrc = () =>{return bgm.src;}
+
 const playsfx = (name) =>{
-  console.log("index playsfx")
   let sfx_path = require('./assets/' + name);
   sfx.src = sfx_path;
   sfx.play();
 }
 const setsfxvol = (vol) =>{sfx.volume = vol;}
 function getsfxvol(){return sfx.volume;}
-
-// if(bgm.src === "") setbgm("bgm1.mp3");
 
 console.log("index rendered");
 const root = ReactDOM.createRoot(document.getElementById('root'));
