@@ -185,7 +185,7 @@ img{
     position: absolute;
     display: grid;
     left: 20px;
-    top: 134px;
+    top: 10vh;
     grid-row: 1;
     grid-column: 1;
     width: 50%;
